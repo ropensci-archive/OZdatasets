@@ -1,6 +1,24 @@
 
+The beach data set is made available from
+https://github.com/rladiessydney/RYouWithMe
+with minimal documentation. You need to make you have installed the package readr.
 
-```{r}
-
+```{r} 
+library(readr)
+library(tidyverse)
+library(ggplot2)
+Syd_beach<-read_csv("https://raw.githubusercontent.com/rladiessydney/RYouWithMe/master/sydneybeaches.csv")
+getwd()
+Syd_beach
+str(Syd_beach)
+Syd_beach$Site %>% unique
+Syd_beach$Region %>% unique
+Syd_beach$Council %>% unique
+p1<-qplot(Syd_beach$Site,log(Syd_beach$`Enterococci (cfu/100ml)`+0.5),data=Syd_beach,geom=c("boxplot"),main="Enterococci",xlab="",ylab="Log(cflu/100 ml + 0.5)")
+p1+coord_flip()
+qplot(Syd_beach$Council,log(Syd_beach$`Enterococci (cfu/100ml)`+0.5),data=Syd_beach,geom=c("boxplot"),main="Enterococci",xlab="Council",ylab="Log(cflu/100 ml + 0.5)")
 ```
+
+
+
 
