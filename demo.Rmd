@@ -87,8 +87,11 @@ Access the data [here](https://melbourneinstitute.unimelb.edu.au/hilda/for-data-
 
 ## Austats
 
-```{r}
-#install.packages("raustats")
+```{r, eval = FALSE}
+install.packages("raustats")
+```
+
+```{r, eval = TRUE}
 library(raustats)
 ```
 

@@ -44,8 +44,11 @@ DT::datatable(df, colnames = c("Name","Topic","Package/Link","Data explanation")
 
 The [readme file](https://github.com/mdsumner/ozmaps/) is very descriptive for how to create Maps of australia in ggplot. 
 
-```{r}
-#install.packages("ozmaps")
+```{r, eval = FALSE}
+install.packages("ozmaps")
+```
+
+```{r, eval = TRUE}
 library(ozmaps)
 
 ```
