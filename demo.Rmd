@@ -38,12 +38,12 @@ str(eechidna::fp16)
 #### Australian Federal Elections Datasets
 
 ```{r, eval = TRUE}
-str(eechidna::abs01)
-str(eechidna::abs04)
-str(eechidna::abs07)
-str(eechidna::abs10)
-str(eechidna::abs13)
-str(eechidna::abs16)
+str(eechidna::abs2001)
+str(eechidna::abs2004)
+str(eechidna::abs2007)
+str(eechidna::abs2010)
+str(eechidna::abs2013)
+str(eechidna::abs2016)
 
 ```
 
