@@ -30,9 +30,14 @@ movements %>%
 
 ### Ozroaddeaths
 
-Ozunconf18 produced a package to easily obtain this data (and did some cleaning). 
-**Kristy is trying to fix their links so we can include it**
-https://github.com/ropenscilabs/ozroaddeaths
+Ozunconf18 produced a package to easily obtain this data (and did some cleaning). https://github.com/ropenscilabs/ozroaddeaths
+```{r roaddeaths, warning=FALSE, message=FALSE}
+library(tidyverse)
+
+crashes <- ozroaddeaths::oz_road_fatal_crash() # NOT WORKING
+fatalities <- ozroaddeaths::oz_road_fatalities()
+```
+
 
 
 ### Vehicle use in Australia 2018
