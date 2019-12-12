@@ -17,7 +17,7 @@ This dataset contains data from the Australian Federal elections in 2001, 2004, 
 
 ```{r}
 install.packages("eechidna")
-
+library(eechidna)
 ```
 
 This dataset was created at rOpenSci auunconf 2016. Repo: [eechidna](https://github.com/ropenscilabs/eechidna)
