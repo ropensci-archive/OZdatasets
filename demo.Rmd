@@ -93,3 +93,8 @@ library(raustats)
 ```
 
 Checkout the vignette for how to [download datasets within R](https://cran.r-project.org/web/packages/raustats/vignettes/raustats_introduction.html)
+
+### NLCD
+
+National centre for longitudinal data (NLCD) datasets are available, pending completion of confidentiality etc. 
+[See here](https://dataverse.ada.edu.au/dataverse/ncld)

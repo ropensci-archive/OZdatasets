@@ -1,5 +1,5 @@
 
-## Beach datasets
+### Beach datasets
 
 The beach data set is made available from
 https://github.com/rladiessydney/RYouWithMe
@@ -20,16 +20,16 @@ p1+coord_flip()
 qplot(Syd_beach$Council,log(Syd_beach$`Enterococci (cfu/100ml)`+0.5),data=Syd_beach,geom=c("boxplot"),main="Enterococci",xlab="Council",ylab="Log(cflu/100 ml + 0.5)")
 ```
 
-## Birds datasets
+### Birds datasets
 
 Various datasets about Austrlian birds are [here](https://birdata.birdlife.org.au/). Simply 
 
-## Atlas of living Australia 
+### Atlas of living Australia 
 
 Search occurrence records in the ALA by species, taxon, dataset, region, date, location, data provider…
 Access the data [here](https://www.ala.org.au/)
 
-## Bush Fires data 
+### Bush Fires data 
 
 Download Near real-time MODIS (C6) and VIIRS (375 m) active fire data.
 Access the data [here](https://firms.modaps.eosdis.nasa.gov/active_fire/)
