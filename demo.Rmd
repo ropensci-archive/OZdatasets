@@ -99,9 +99,6 @@ Checkout the vignette for how to [download datasets within R](https://cran.r-pro
 National centre for longitudinal data (NLCD) datasets are available, pending completion of confidentiality etc. 
 [See here](https://dataverse.ada.edu.au/dataverse/ncld)
 
-### Ozroaddeaths
-
-Ozunconf18 produced a package to easily obtain this data (and did some cleaning). 
-**Kristy is trying to fix their links so we can include it**
-https://github.com/ropenscilabs/ozroaddeaths
+### Marriage equality data (2017)
+Data from the Australian Bureau of Statistics from the 2017 Marriage Equality Postal Survey [participation data](https://www.abs.gov.au/ausstats/ABS@Archive.nsf/log?openagent&australian_marriage_law_postal_survey_2017_-_participation_final.xls&1800.0&Time%20Series%20Spreadsheet&830FD42482B309D6CA2581F0001A085B&0&2017&11.12.2017&Latest) [response data](https://www.abs.gov.au/ausstats/ABS@Archive.nsf/log?openagent&australian_marriage_law_postal_survey_2017_-_response_final.xls&1800.0&Time%20Series%20Spreadsheet&916379DAEE6E960CCA2581F0001A08A9&0&2017&11.12.2017&Latest).
 
