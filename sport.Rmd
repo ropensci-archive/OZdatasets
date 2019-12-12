@@ -1,6 +1,26 @@
 
+https://github.com/ropenscilabs/aflinfo
+### AFL data
+
+This 
 
 ```{r}
+devtools::install_github("ropenscilabs/aflinfo")
+library(AFLinfo)
 
 ```
 
+### Cricket data
+
+This is an international cricket data package created at [Ozunconf2017](https://github.com/ropenscilabs/cricketdata). 
+
+Install package:
+
+```{r}
+devtools::install_github("ropenscilabs/cricketdata")
+suppressPackageStartupMessages(library(cricketdata)) 
+```
+
+fetch_cricinfo	Fetch Data from Cricinfo
+fetch_player_data	Fetch Player Data
+find_player_id	Find a player id from cricinfo.com
