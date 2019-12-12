@@ -22,12 +22,12 @@ qplot(Syd_beach$Council,log(Syd_beach$`Enterococci (cfu/100ml)`+0.5),data=Syd_be
 
 ## Birds datasets
 
-Various datasets about Austrlian birds are [here](https://birdata.birdlife.org.au/).
+Various datasets about Austrlian birds are [here](https://birdata.birdlife.org.au/). Simply 
 
 ## Atlas of living Australia 
 
 Search occurrence records in the ALA by species, taxon, dataset, region, date, location, data provider…
-https://www.ala.org.au/
+Acess the data [here](https://www.ala.org.au/)
 
 
 

@@ -1,7 +1,10 @@
+
+### Ozflights
+
 Flight data from the Bureau of Infrastructure, Transport and Regional Economics [BITRE](https://www.bitre.gov.au/publications), downloaded using the [ozflights package](https://github.com/ropenscilabs/ozflights). See the documentation at https://github.com/ropenscilabs/ozflights. 
 
 ```{r}
-devtools::install_github("ropenscilabs/ozflights")
+#devtools::install_github("ropenscilabs/ozflights")
 
 passengers <- ozflights::airport_passengers()
 freight <- ozflights::international_freight()

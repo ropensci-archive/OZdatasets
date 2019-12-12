@@ -80,3 +80,16 @@ This dataset was created at BURGr R Unconf 2017. Repo: [ozdata](https://github.c
 
 Check out [this README file](https://github.com/ropenscilabs/datagovau) on Github for more information. 
 
+###  HILA survey
+
+The Household, Income and Labour Dynamics in Australia (HILDA) Survey is a household-based panel study that collects valuable information about economic and personal well-being, labour market dynamics and family life. It aims to tell the stories of the same group of Australians over the course of their lives.
+Access the data [here](https://melbourneinstitute.unimelb.edu.au/hilda/for-data-users)
+
+## Austats
+
+```{r}
+#install.packages("raustats")
+library(raustats)
+```
+
+Checkout the vignette for how to [download datasets within R](https://cran.r-project.org/web/packages/raustats/vignettes/raustats_introduction.html)
