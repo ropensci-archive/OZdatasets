@@ -98,3 +98,10 @@ Checkout the vignette for how to [download datasets within R](https://cran.r-pro
 
 National centre for longitudinal data (NLCD) datasets are available, pending completion of confidentiality etc. 
 [See here](https://dataverse.ada.edu.au/dataverse/ncld)
+
+### Ozroaddeaths
+
+Ozunconf18 produced a package to easily obtain this data (and did some cleaning). 
+**Kristy is trying to fix their links so we can include it**
+https://github.com/ropenscilabs/ozroaddeaths
+
