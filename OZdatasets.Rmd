@@ -6,29 +6,58 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE )
 ```
 
 ## Summary table
+```{r}
+library(DT)
+df<-rbind(c("ozflights", "transport", "package", "Flight data"),
+          c("ozmaps", "maps", "package", "maps of Australia")
+)
 
+DT::datatable(df, colnames = c("Name","Topic","Package/Link","Data explanation"))
 
+```
 
 ## Transport 
-```{r child="transport.Rmd"}
 
+```{r child="transport.Rmd"}
 ```
 
 ## Environmental
-```{r child="enviro.Rmd"}
 
+```{r child="enviro.Rmd"}
 ```
 
 ## Demographics
-```{r child="demo.Rmd"}
 
+```{r child="demo.Rmd"}
 ```
 
 ## Sport
-```{r child="sports.Rmd"}
+
+```{r child="sport.Rmd"}
+```
+
+## Maps
+
+The [readme file](https://github.com/mdsumner/ozmaps/) is very descriptive for how to create Maps of australia in ggplot. 
+
+```{r}
+#install.packages("ozmaps")
+library(ozmaps)
 
 ```
+
+## Miscellaneous 
+
+### Ozdates
+
+Important australian dates, like public holidays etc. The readme on [github](https://deanmarchiori.github.io/ozdates/) explains how to use. 
+
+```{r, eval=FALSE}
+devtools::install_github("deanmarchiori/ozdates")
+```
+
+

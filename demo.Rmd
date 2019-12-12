@@ -3,8 +3,11 @@
 
 This dataset contains summary data for popular Australian baby names by sex, state and year. 
 
-```{r, eval = TRUE}
+```{r, eval = FALSE}
 #devtools::install_github("ropenscilabs/ozbabynames")
+```
+
+```{r, eval = TRUE}
 library(ozbabynames)
 str(ozbabynames)
 ```
@@ -14,26 +17,88 @@ This dataset was created at rOpenSci OzUnconf 2019. Repo: [ozbabynames](https://
 
 ### eechidna
 
-This dataset contains data from the Australian Federal elections in 2001, 2004, 2007, 2010, 2013 and 2016, along with the Australian Census information for each House of Representatives electorate from the 2001, 2006, 2011 and 2016 Censuses. Additionally, Census information is imputed for electorates in years 2004, 2007, 2010 and 2013.
+This package contains datasets from the Australian Federal elections in 2001, 2004, 2007, 2010, 2013 and 2016, along with the Australian Census information for each House of Representatives electorate from the 2001, 2006, 2011 and 2016 Censuses. Additionally, Census information is imputed for electorates in years 2004, 2007, 2010 and 2013.
 
-```{r }
-#devtools::install_github("ropenscilabs/eechidna")
-library(eechidna)
-str(eechidna)
+```{r, eval=FALSE}
+devtools::install_github("ropenscilabs/eechidna")
 ```
 
-This dataset was created at rOpenSci auunconf 2016. Repo: [eechidna](https://github.com/ropenscilabs/eechidna)
+#### Australian Federal Elections Datasets
+
+```{r, eval = TRUE}
+str(eechidna::fp01)
+str(eechidna::fp04)
+str(eechidna::fp07)
+str(eechidna::fp10)
+str(eechidna::fp13)
+str(eechidna::fp16)
+
+```
+
+#### Australian Federal Elections Datasets
+
+```{r, eval = TRUE}
+str(eechidna::abs2001)
+str(eechidna::abs2004)
+str(eechidna::abs2007)
+str(eechidna::abs2010)
+str(eechidna::abs2013)
+str(eechidna::abs2016)
+
+```
+
+
+These datasets were created at rOpenSci auunconf 2016. Repo: [eechidna](https://github.com/ropenscilabs/eechidna)
 
 
 ### ozmacrodata
 
-Aus economics dataset. 
+Functions to search and download Australian economics dataset. 
 
-```{r, eval=TRUE}
-#devtools::install_github("AU-burgr/ozdata")
+```{r, eval = FALSE}
+devtools::install_github("AU-burgr/ozdata")
+```
+
+```{r, eval = FALSE}
 library(ozdata)
+```
 
+#### Examples 
+
+To download data from [](http://ausmacrodata.org), you can search the website and return a table of available datasets. You then download the data of interest. 
+
+```{r, eval = FALSE}
+macro_datasets <- search_ausmacrodata('births')
+macro_datasets
 ```
 
 
 This dataset was created at BURGr R Unconf 2017. Repo: [ozdata](https://github.com/AU-BURGr/ozdata)
+
+
+### datagovau
+
+Check out [this README file](https://github.com/ropenscilabs/datagovau) on Github for more information. 
+
+###  HILA survey
+
+The Household, Income and Labour Dynamics in Australia (HILDA) Survey is a household-based panel study that collects valuable information about economic and personal well-being, labour market dynamics and family life. It aims to tell the stories of the same group of Australians over the course of their lives.
+Access the data [here](https://melbourneinstitute.unimelb.edu.au/hilda/for-data-users)
+
+## Austats
+
+```{r}
+#install.packages("raustats")
+library(raustats)
+```
+
+Checkout the vignette for how to [download datasets within R](https://cran.r-project.org/web/packages/raustats/vignettes/raustats_introduction.html)
+
+### NLCD
+
+National centre for longitudinal data (NLCD) datasets are available, pending completion of confidentiality etc. 
+[See here](https://dataverse.ada.edu.au/dataverse/ncld)
+
+### Marriage equality data (2017)
+Data from the Australian Bureau of Statistics from the 2017 Marriage Equality Postal Survey [participation data](https://www.abs.gov.au/ausstats/ABS@Archive.nsf/log?openagent&australian_marriage_law_postal_survey_2017_-_participation_final.xls&1800.0&Time%20Series%20Spreadsheet&830FD42482B309D6CA2581F0001A085B&0&2017&11.12.2017&Latest) [response data](https://www.abs.gov.au/ausstats/ABS@Archive.nsf/log?openagent&australian_marriage_law_postal_survey_2017_-_response_final.xls&1800.0&Time%20Series%20Spreadsheet&916379DAEE6E960CCA2581F0001A08A9&0&2017&11.12.2017&Latest).
+
