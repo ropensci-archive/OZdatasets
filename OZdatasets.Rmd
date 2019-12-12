@@ -32,3 +32,13 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r child="sports.Rmd"}
 
 ```
+
+## Maps
+
+The [readme file](https://github.com/mdsumner/ozmaps/) for this is very descriptive for how to create 
+```{r}
+#install.packages("ozmaps")
+library(ozmaps)
+
+```
+
