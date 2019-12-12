@@ -1,6 +1,6 @@
 ---
 title: "OZdatasets"
-author: "Kristy Robledo"
+author: "Kristy Robledo, Jessica Lee, Alyce Russell, Tanya Prvan"
 date: "12/12/2019"
 output: html_document
 ---
