@@ -11,12 +11,22 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Summary table
 
-## Medical
+
 
 ## Transport 
+```{r child="transport.Rmd"}
+
+```
 
 ## Environmental
+```{r child="enviro.Rmd"}
 
+```
 ## Demographics
+```{r child="demo.Rmd"}
 
-## Resources
+```
+## Sport
+```{r child="sports.Rmd"}
+
+```
