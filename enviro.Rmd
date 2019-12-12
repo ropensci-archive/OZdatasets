@@ -19,6 +19,24 @@ p1+coord_flip()
 qplot(Syd_beach$Council,log(Syd_beach$`Enterococci (cfu/100ml)`+0.5),data=Syd_beach,geom=c("boxplot"),main="Enterococci",xlab="Council",ylab="Log(cflu/100 ml + 0.5)")
 ```
 
+**Environmental river flows**
+ 
+We are going to investigate the relationship between the Murray River average daily water level in metres (WaterLevel) and daily rainfall in mm at Pinegrove on the Murray River (Rainfall) available in the file *PineGrove19Aug19.csv*. It is reasonable to assume that the average daily water level is influenced by rainfall. This data covers the time period from 20 August 2018 to 19 August 2019. This data was extracted from https://riverdata.mdba.gov.au/pinegrove on 20 August 2019. Other locations could be extracted from https://riverdata.mdba.gov.au/. Only the most recent year of data can be extracted.
 
-
+```{r}
+library(graphics)
+Pinegrove<-read_csv("PineGrove19Aug19.csv")
+Pinegrove
+par(mfrow=c(1,2))
+plot.ts(Pinegrove$WaterLevel)
+plot.ts(Pinegrove$Rainfall)
+require(graphics)
+par(mfrow=c(2,2))
+acf(Pinegrove$WaterLevel)
+pacf(Pinegrove$WaterLevel)
+acf(Pinegrove$Rainfall)
+pacf(Pinegrove$Rainfall)
+par(mfrow=c(1,1))
+ ccf(Pinegrove$WaterLevel, Pinegrove$Rainfall, ylab = "Cross-correlation")
+```
 
