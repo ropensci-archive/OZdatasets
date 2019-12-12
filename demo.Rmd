@@ -4,7 +4,7 @@
 This dataset contains summary data for popular Australian baby names by sex, state and year. 
 
 ```{r, eval = TRUE}
-devtools::install_github("ropenscilabs/ozbabynames")
+#devtools::install_github("ropenscilabs/ozbabynames")
 library(ozbabynames)
 str(ozbabynames)
 ```
@@ -16,8 +16,8 @@ This dataset was created at rOpenSci OzUnconf 2019. Repo: [ozbabynames](https://
 
 This dataset contains data from the Australian Federal elections in 2001, 2004, 2007, 2010, 2013 and 2016, along with the Australian Census information for each House of Representatives electorate from the 2001, 2006, 2011 and 2016 Censuses. Additionally, Census information is imputed for electorates in years 2004, 2007, 2010 and 2013.
 
-```{r, eval = TRUE}
-devtools::install_github("ropenscilabs/eechidna")
+```{r }
+#devtools::install_github("ropenscilabs/eechidna")
 library(eechidna)
 str(eechidna)
 ```
@@ -30,7 +30,7 @@ This dataset was created at rOpenSci auunconf 2016. Repo: [eechidna](https://git
 Aus economics dataset. 
 
 ```{r, eval=TRUE}
-devtools::install_github("AU-burgr/ozdata")
+#devtools::install_github("AU-burgr/ozdata")
 library(ozdata)
 
 ```

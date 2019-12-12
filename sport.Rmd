@@ -5,7 +5,7 @@
 A data package was put together at the [OzUnconf17](https://github.com/ropenscilabs/aflinfo). 
 
 ```{r}
-devtools::install_github("ropenscilabs/aflinfo")
+#devtools::install_github("ropenscilabs/aflinfo")
 library(AFLinfo)
 
 ```
@@ -13,7 +13,7 @@ library(AFLinfo)
 However, the fitzRoy package is a better datasource! This package is on CRAN, and accesses data from afltables.com and footywire.com. The author [produced a talk](https://www.youtube.com/watch?v=K80leRL1U3A) on using AFL data to increase the appeal or R and stats to the public. 
 
 ```{r}
-install.packages("fitzRoy")
+#install.packages("fitzRoy")
 ```
 
 The readme is very informative. 
@@ -25,7 +25,7 @@ This is an international cricket data package created at [Ozunconf2017](https://
 Details on installing the package:
 
 ```{r}
-devtools::install_github("ropenscilabs/cricketdata")
+#devtools::install_github("ropenscilabs/cricketdata")
 suppressPackageStartupMessages(library(cricketdata)) 
 ```
 
