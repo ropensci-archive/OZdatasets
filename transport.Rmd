@@ -3,14 +3,27 @@
 
 Flight data from the Bureau of Infrastructure, Transport and Regional Economics [BITRE](https://www.bitre.gov.au/publications), downloaded using the [ozflights package](https://github.com/ropenscilabs/ozflights). See the documentation at https://github.com/ropenscilabs/ozflights. 
 
-```{r, warning=FALSE, message=FALSE}
+```{r flights, warning=FALSE, message=FALSE}
 #devtools::install_github("ropenscilabs/ozflights")
+library(tidyverse)
 
 passengers <- ozflights::airport_passengers()
 freight <- ozflights::international_freight()
 movements <- ozflights::aircraft_movements()
 airports <- ozflights::airports()
 distances <- ozflights::flightdistances()
+
+passengers %>%
+  filter(airport == "TOTAL AUSTRALIA") %>%
+  ggplot(aes(x = year, y = count, group = domest, colour = domest)) +
+  geom_line() + facet_wrap(~type) + theme_minimal() +
+  ggtitle("Inbound and outbound flight passengers in Australia")
+
+movements %>%
+  filter(airport == "TOTAL AUSTRALIA") %>%
+  ggplot(aes(x = year, y = count, group = domest, colour = domest)) +
+  geom_line() + facet_wrap(~type) + theme_minimal() +
+  ggtitle("Flight passenger movements in Australia")
 
 ```
 
@@ -20,3 +33,8 @@ distances <- ozflights::flightdistances()
 Ozunconf18 produced a package to easily obtain this data (and did some cleaning). 
 **Kristy is trying to fix their links so we can include it**
 https://github.com/ropenscilabs/ozroaddeaths
+
+
+### Vehicle use in Australia 2018
+
+Data about motor vehicle use in Australia from the Australian Bureau of Statistics [link](https://www.abs.gov.au/ausstats/Subscriber.nsf/LookupAttach/9208.0Data+Cubes-20.03.191/$File/92080do001_1202201810.xls).
