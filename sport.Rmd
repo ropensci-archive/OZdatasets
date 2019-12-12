@@ -1,12 +1,11 @@
 
-
 ### AFL data
 
 A data package was put together at the [OzUnconf17](https://github.com/ropenscilabs/aflinfo). 
 
 ```{r}
 #devtools::install_github("ropenscilabs/aflinfo")
-library(AFLinfo)
+#library(AFLinfo)
 
 ```
 

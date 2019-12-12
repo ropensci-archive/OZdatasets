@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE )
 ```
 
 ## Summary table
@@ -29,13 +29,14 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Sport
-```{r child="sports.Rmd"}
+```{r child="sport.Rmd"}
 
 ```
 
 ## Maps
 
-The [readme file](https://github.com/mdsumner/ozmaps/) for this is very descriptive for how to create 
+The [readme file](https://github.com/mdsumner/ozmaps/) for this is very descriptive for how to create Maps of australia in ggplot. 
+
 ```{r}
 #install.packages("ozmaps")
 library(ozmaps)
