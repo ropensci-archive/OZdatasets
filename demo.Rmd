@@ -53,7 +53,7 @@ These datasets were created at rOpenSci auunconf 2016. Repo: [eechidna](https://
 
 ### ozmacrodata
 
-Aus economics dataset. 
+Functions to search and download Australian economics dataset. 
 
 ```{r, eval = FALSE}
 devtools::install_github("AU-burgr/ozdata")
@@ -74,3 +74,9 @@ macro_datasets
 
 
 This dataset was created at BURGr R Unconf 2017. Repo: [ozdata](https://github.com/AU-BURGr/ozdata)
+
+
+### datagovau
+
+Check out [this README file](https://github.com/ropenscilabs/datagovau) on Github for more information. 
+
