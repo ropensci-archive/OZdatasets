@@ -1,4 +1,6 @@
 
+### Beach datasets
+
 The beach data set is made available from
 https://github.com/rladiessydney/RYouWithMe
 with minimal documentation. You need to make you have installed the package readr.
@@ -8,7 +10,6 @@ library(readr)
 library(tidyverse)
 library(ggplot2)
 Syd_beach<-read_csv("https://raw.githubusercontent.com/rladiessydney/RYouWithMe/master/sydneybeaches.csv")
-getwd()
 Syd_beach
 str(Syd_beach)
 Syd_beach$Site %>% unique
@@ -39,4 +40,20 @@ pacf(Pinegrove$Rainfall)
 par(mfrow=c(1,1))
  ccf(Pinegrove$WaterLevel, Pinegrove$Rainfall, ylab = "Cross-correlation")
 ```
+
+
+### Birds datasets
+
+Various datasets about Austrlian birds are [here](https://birdata.birdlife.org.au/). Simply 
+
+### Atlas of living Australia 
+
+Search occurrence records in the ALA by species, taxon, dataset, region, date, location, data provider…
+Access the data [here](https://www.ala.org.au/)
+
+### Bush Fires data 
+
+Download Near real-time MODIS (C6) and VIIRS (375 m) active fire data.
+Access the data [here](https://firms.modaps.eosdis.nasa.gov/active_fire/)
+
 
