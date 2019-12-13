@@ -14,21 +14,25 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE )
 library(DT)
 df<-rbind(c("ozflights", "transport", "package", "Flight data"),
           c("ozroaddeaths", "transport", "package", "Road deaths"),
-          c("ozvehicles", "transport", "link", "Vehicle use"),
-          c("ozbeaches", "environment", "link", "Sydney beach data"),
-          c("ozriver", "environment", "link", "River and rainfall data"),
-          c("ozbirds", "environment", "link", "Data about Australian birds"),
-          c("ozatlas", "environment", "link", "Atlas of Australian biodiversity"),
-          c("ozfires", "environment", "link", "Bush fire data"),
-          c("", "demographics", "link", ""),
-          c("", "demographics", "link", ""),
-          c("", "demographics", "link", ""),
-          c("", "demographics", "link", ""),
-          c("", "demographics", "link", ""),
-          c("", "demographics", "link", ""),
-          c("", "demographics", "link", ""),
+          c("vehicles", "transport", "link", "Vehicle use"),
+          c("beaches", "environment", "link", "Sydney beach data"),
+          c("river", "environment", "link", "River and rainfall data"),
+          c("birds", "environment", "link", "Data about Australian birds"),
+          c("atlas", "environment", "link", "Atlas of Australian biodiversity"),
+          c("fires", "environment", "link", "Bush fire data"),
+          c("ozbabynames", "demographics", "package", "Baby names in Australia"),
+          c("eechidna", "demographics", "package", "Election and census data"),
+          c("ozdata", "demographics", "package", "Australian economic data"),
+          c("raustats", "demographics", "package-BROKEN??", "Household survey"),
+          c("longitudinal", "demographics", "link", "Longitudinal"),
+          c("marriageequality", "demographics", "link", "Data from the 2017 marriage equality survey"),
+          c("aflinfo", "sport", "package", "AFL data"),
+          c("fitzRoy", "sport", "package", "AFL data"),
+          c("cricketdata", "sport", "package", "Cricket data"),
           c("ozmaps", "maps", "package", "Maps of Australia"),
-          
+          c("ozdates", "misc", "package", "Maps of Australia"),
+          c("smokeybear", "", "package", ""), # TO ADD
+          c("learningtower", "", "package", "") # TO ADD
 )
 
 DT::datatable(df, colnames = c("Name","Topic","Package/Link","Data explanation"))
