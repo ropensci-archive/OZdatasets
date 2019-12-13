@@ -13,7 +13,22 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE )
 ```{r}
 library(DT)
 df<-rbind(c("ozflights", "transport", "package", "Flight data"),
-          c("ozmaps", "maps", "package", "maps of Australia")
+          c("ozroaddeaths", "transport", "package", "Road deaths"),
+          c("ozvehicles", "transport", "link", "Vehicle use"),
+          c("ozbeaches", "environment", "link", "Sydney beach data"),
+          c("ozriver", "environment", "link", "River and rainfall data"),
+          c("ozbirds", "environment", "link", "Data about Australian birds"),
+          c("ozatlas", "environment", "link", "Atlas of Australian biodiversity"),
+          c("ozfires", "environment", "link", "Bush fire data"),
+          c("", "demographics", "link", ""),
+          c("", "demographics", "link", ""),
+          c("", "demographics", "link", ""),
+          c("", "demographics", "link", ""),
+          c("", "demographics", "link", ""),
+          c("", "demographics", "link", ""),
+          c("", "demographics", "link", ""),
+          c("ozmaps", "maps", "package", "Maps of Australia"),
+          
 )
 
 DT::datatable(df, colnames = c("Name","Topic","Package/Link","Data explanation"))
