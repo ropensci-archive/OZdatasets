@@ -163,4 +163,10 @@ Convicts were usually given sentences of transportation for seven, 14 years or l
 
 There are seven indexes containing around 140,000 entries in total, which can be accessed through the [website](https://data.gov.au/dataset/ds-nsw-acdd01d0-d700-465c-a183-735c4f139ca0/details).
 
+### Indigenous Mortality
 
+Indigenous mortality data from the [indmortality package](https://github.com/robjhyndman/indmortality).
+
+### Australian Demographic Data Base
+
+Demographic database from the [addb package](https://github.com/robjhyndman/addb).
