@@ -5,11 +5,13 @@ date: "12/12/2019"
 output: 
   html_document:
     keep_md: TRUE 
-    theme: default
+    theme: spacelab
     highlight: monochrome
     toc: TRUE
     toc_float: TRUE
 ---
+
+<div style="margin-bottom:50px;">
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -21,14 +23,21 @@ $(document).ready(function() {
 
 
 
+</div>
 
 This repository was compiled at the rOpenSci OzUnconf19 @ University of Sydney, December 2019. 
 
 Its purpose is to document datasets previously created at OzUnconf events, as well as other interesting and unique Australian datasets and resources. We have made our best attempt to have these links/packages functioning. However, in the case of errors still existing, an issue has been logged on Github. 
 
+<div style="margin-bottom:50px;">
+</div>
+
 ## Summary table
-<!--html_preserve--><div id="htmlwidget-850e15c7f50f084738e9" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-850e15c7f50f084738e9">{"x":{"filter":"none","data":[["ozflights","ozroaddeaths","vehicles","beaches","river","birds","atlas","fires","ozbabynames","eechidna","ozdata","raustats","longitudinal","marriageequality","aflinfo","fitzRoy","cricketdata","ozmaps","ozdates","smokeybear","learningtower"],["transport","transport","transport","environment","environment","environment","environment","environment","demographics","demographics","demographics","demographics","demographics","demographics","sport","sport","sport","maps","misc","",""],["package","package","link","link","link","link","link","link","package","package","package","package-BROKEN??","link","link","package","package","package","package","package","package","package"],["Flight data","Road deaths","Vehicle use","Sydney beach data","River and rainfall data","Data about Australian birds","Atlas of Australian biodiversity","Bush fire data","Baby names in Australia","Election and census data","Australian economic data","Household survey","Longitudinal","Data from the 2017 marriage equality survey","AFL data","AFL data","Cricket data","Maps of Australia","Maps of Australia","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Name<\/th>\n      <th>Topic<\/th>\n      <th>Package/Link<\/th>\n      <th>Data explanation<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"lengthMenu":[10,20,50],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-85a519ea1e42e26964a9" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-85a519ea1e42e26964a9">{"x":{"filter":"none","data":[["ozflights","ozroaddeaths","vehicles","beaches","river","birds","atlas","fires","ozbabynames","eechidna","ozdata","raustats","longitudinal","marriageequality","aflinfo","fitzRoy","cricketdata","ozmaps","ozdates","smokeybear","learningtower"],["transport","transport","transport","environment","environment","environment","environment","environment","demographics","demographics","demographics","demographics","demographics","demographics","sport","sport","sport","maps","misc","",""],["package","package","link","link","link","link","link","link","package","package","package","package-BROKEN??","link","link","package","package","package","package","package","package","package"],["Flight data","Road deaths","Vehicle use","Sydney beach data","River and rainfall data","Data about Australian birds","Atlas of Australian biodiversity","Bush fire data","Baby names in Australia","Election and census data","Australian economic data","Household survey","Longitudinal","Data from the 2017 marriage equality survey","AFL data","AFL data","Cricket data","Maps of Australia","Maps of Australia","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Name<\/th>\n      <th>Topic<\/th>\n      <th>Package/Link<\/th>\n      <th>Data explanation<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"lengthMenu":[10,20,50],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+
+<div style="margin-bottom:50px;">
+</div>
 
 ## Transport 
 
@@ -85,6 +94,9 @@ fatalities <- ozroaddeaths::oz_road_fatalities()
 ### Vehicle use in Australia 2018
 
 Data about motor vehicle use in Australia from the Australian Bureau of Statistics [link](https://www.abs.gov.au/ausstats/Subscriber.nsf/LookupAttach/9208.0Data+Cubes-20.03.191/$File/92080do001_1202201810.xls).
+
+<div style="margin-bottom:50px;">
+</div>
 
 ## Environmental
 
@@ -198,13 +210,13 @@ p1<-qplot(Syd_beach$Site,log(Syd_beach$`Enterococci (cfu/100ml)`+0.5),data=Syd_b
 p1+coord_flip()
 ```
 
-![](OZdatasets_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](OZdatasets_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 ```r
 qplot(Syd_beach$Council,log(Syd_beach$`Enterococci (cfu/100ml)`+0.5),data=Syd_beach,geom=c("boxplot"),main="Enterococci",xlab="Council",ylab="Log(cflu/100 ml + 0.5)")
 ```
 
-![](OZdatasets_files/figure-html/unnamed-chunk-9-2.png)<!-- -->
+![](OZdatasets_files/figure-html/unnamed-chunk-10-2.png)<!-- -->
 
 ### Environmental river flows
  
@@ -253,7 +265,7 @@ plot.ts(Pinegrove$WaterLevel)
 plot.ts(Pinegrove$Rainfall)
 ```
 
-![](OZdatasets_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](OZdatasets_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
 ```r
 require(graphics)
@@ -264,14 +276,14 @@ acf(Pinegrove$Rainfall)
 pacf(Pinegrove$Rainfall)
 ```
 
-![](OZdatasets_files/figure-html/unnamed-chunk-10-2.png)<!-- -->
+![](OZdatasets_files/figure-html/unnamed-chunk-11-2.png)<!-- -->
 
 ```r
 par(mfrow=c(1,1))
  ccf(Pinegrove$WaterLevel, Pinegrove$Rainfall, ylab = "Cross-correlation")
 ```
 
-![](OZdatasets_files/figure-html/unnamed-chunk-10-3.png)<!-- -->
+![](OZdatasets_files/figure-html/unnamed-chunk-11-3.png)<!-- -->
 
 
 ### Birds datasets
@@ -309,6 +321,9 @@ Marine and climate science data can be accessed from  [here](https://portal.aodn
 
 This can be ordered free from  [here](https://discover.data.vic.gov.au/dataset/australian-fur-seal-brown-fur-seal-colonies-in-victorian-marine-waters-and-adjacent-tasmanian-w) which comes from *DataVic* which is the place to discover and access Victorian Government open data. See [here](https://data.vic.gov.au/) for access to other data sets. 
 
+
+<div style="margin-bottom:50px;">
+</div>
 
 ## Demographics
 
@@ -1134,6 +1149,9 @@ There are seven indexes containing around 140,000 entries in total, which can be
 
 
 
+<div style="margin-bottom:50px;">
+</div>
+
 ## Sport
 
 
@@ -1268,9 +1286,12 @@ The [readme is really useful](https://github.com/ropenscilabs/cricketdata) and d
 
 
 
+<div style="margin-bottom:50px;">
+</div>
+
 ## Maps
 
-The [readme file](https://github.com/mdsumner/ozmaps/) is very descriptive for how to create Maps of australia in ggplot. 
+The [README file](https://github.com/mdsumner/ozmaps/) is very descriptive for how to create Maps of australia in ggplot. 
 
 
 ```r
@@ -1280,17 +1301,68 @@ install.packages("ozmaps")
 
 ```r
 library(ozmaps)
+
+#map of Australia
+ozmap(x = "country")
 ```
+
+![](OZdatasets_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+
+<div style="margin-bottom:50px;">
+</div>
 
 ## Miscellaneous 
 
 ### Ozdates
 
-Important australian dates, like public holidays, in a downloadable file. The README is on [github](https://deanmarchiori.github.io/ozdates/) explains how to use. 
-
+The goal of ozdates is to provide historical data of important Australian dates to help with data analysis and time series modelling. The [README](https://deanmarchiori.github.io/ozdates/) is on Github. 
 
 ```r
 devtools::install_github("deanmarchiori/ozdates")
+```
+
+#### Example
+
+
+```r
+library(ozdates)
+library(dplyr)
+library(lubridate)
+
+# What holidays occured in New South Wales in 2018?
+nsw_hols <- aus_public_holidays %>% 
+  filter(jurisdiction == "NSW",
+         year(date) == "2018") %>% 
+  select(date, holiday_name, jurisdiction)
+
+nsw_hols
+```
+
+```
+## # A tibble: 12 x 3
+##    date       holiday_name     jurisdiction
+##    <date>     <chr>            <chr>       
+##  1 2018-01-01 New Year's Day   NSW         
+##  2 2018-01-26 Australia Day    NSW         
+##  3 2018-03-30 Good Friday      NSW         
+##  4 2018-03-31 Easter Saturday  NSW         
+##  5 2018-04-01 Easter Sunday    NSW         
+##  6 2018-04-02 Easter Monday    NSW         
+##  7 2018-04-25 ANZAC Day        NSW         
+##  8 2018-06-11 Queen's Birthday NSW         
+##  9 2018-08-06 Bank Holiday     NSW         
+## 10 2018-10-01 Labour Day       NSW         
+## 11 2018-12-25 Christmas Day    NSW         
+## 12 2018-12-26 Boxing Day       NSW
+```
+
+```r
+# Are there any public holidays in the next 2 months?
+any(nsw_hols$date %within% interval(ymd("2018-04-01"), ymd("2018-05-30")))
+```
+
+```
+## [1] TRUE
 ```
 
 

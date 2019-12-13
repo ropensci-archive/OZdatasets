@@ -5,11 +5,13 @@ date: "12/12/2019"
 output: 
   html_document:
     keep_md: TRUE 
-    theme: default
+    theme: spacelab
     highlight: monochrome
     toc: TRUE
     toc_float: TRUE
 ---
+
+<div style="margin-bottom:50px;">
 
 ```{js logo-js, echo=FALSE}
 $(document).ready(function() {
@@ -23,10 +25,14 @@ $(document).ready(function() {
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE )
 ```
 
+</div>
 
 This repository was compiled at the rOpenSci OzUnconf19 @ University of Sydney, December 2019. 
 
 Its purpose is to document datasets previously created at OzUnconf events, as well as other interesting and unique Australian datasets and resources. We have made our best attempt to have these links/packages functioning. However, in the case of errors still existing, an issue has been logged on Github. 
+
+<div style="margin-bottom:50px;">
+</div>
 
 ## Summary table
 ```{r, echo = FALSE}
@@ -63,29 +69,44 @@ DT::datatable(df, colnames = c("Name","Topic","Package/Link","Data explanation")
 
 ```
 
+<div style="margin-bottom:50px;">
+</div>
+
 ## Transport 
 
 ```{r child="transport.Rmd"}
 ```
+
+<div style="margin-bottom:50px;">
+</div>
 
 ## Environmental
 
 ```{r child="enviro.Rmd"}
 ```
 
+<div style="margin-bottom:50px;">
+</div>
+
 ## Demographics
 
 ```{r child="demo.Rmd"}
 ```
+
+<div style="margin-bottom:50px;">
+</div>
 
 ## Sport
 
 ```{r child="sport.Rmd"}
 ```
 
+<div style="margin-bottom:50px;">
+</div>
+
 ## Maps
 
-The [readme file](https://github.com/mdsumner/ozmaps/) is very descriptive for how to create Maps of australia in ggplot. 
+The [README file](https://github.com/mdsumner/ozmaps/) is very descriptive for how to create Maps of australia in ggplot. 
 
 ```{r, eval = FALSE}
 install.packages("ozmaps")
@@ -94,16 +115,39 @@ install.packages("ozmaps")
 ```{r, eval = TRUE}
 library(ozmaps)
 
+#map of Australia
+ozmap(x = "country")
 ```
+
+<div style="margin-bottom:50px;">
+</div>
 
 ## Miscellaneous 
 
 ### Ozdates
 
-Important australian dates, like public holidays, in a downloadable file. The README is on [github](https://deanmarchiori.github.io/ozdates/) explains how to use. 
-
+The goal of ozdates is to provide historical data of important Australian dates to help with data analysis and time series modelling. The [README](https://deanmarchiori.github.io/ozdates/) is on Github. 
 ```{r, eval=FALSE}
 devtools::install_github("deanmarchiori/ozdates")
+```
+
+#### Example
+
+```{r}
+library(ozdates)
+library(dplyr)
+library(lubridate)
+
+# What holidays occured in New South Wales in 2018?
+nsw_hols <- aus_public_holidays %>% 
+  filter(jurisdiction == "NSW",
+         year(date) == "2018") %>% 
+  select(date, holiday_name, jurisdiction)
+
+nsw_hols
+
+# Are there any public holidays in the next 2 months?
+any(nsw_hols$date %within% interval(ymd("2018-04-01"), ymd("2018-05-30")))
 ```
 
 
