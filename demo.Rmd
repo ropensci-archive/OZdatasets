@@ -14,6 +14,7 @@ str(ozbabynames)
 
 This dataset was created at rOpenSci OzUnconf 2019. Repo: [ozbabynames](https://github.com/ropenscilabs/ozbabynames)
 
+<br>
 
 ### eechidna
 
@@ -22,6 +23,8 @@ This package contains datasets from the Australian Federal elections in 2001, 20
 ```{r, eval=FALSE}
 devtools::install_github("ropenscilabs/eechidna")
 ```
+
+<br> 
 
 #### Australian Federal Elections Datasets
 
@@ -34,6 +37,8 @@ str(eechidna::fp13)
 str(eechidna::fp16)
 
 ```
+
+<br> 
 
 #### Australian Federal Elections Datasets
 
@@ -50,6 +55,7 @@ str(eechidna::abs2016)
 
 These datasets were created at rOpenSci auunconf 2016. Repo: [eechidna](https://github.com/ropenscilabs/eechidna)
 
+<br>
 
 ### ozmacrodata
 
@@ -74,6 +80,7 @@ macro_datasets
 
 This dataset was created at BURGr R Unconf 2017. Repo: [ozdata](https://github.com/AU-BURGr/ozdata)
 
+<br>
 
 ### datagovau
 
@@ -102,6 +109,7 @@ head(water_data[[1]])
 
 Check out [this README file](https://github.com/ropenscilabs/datagovau) on Github for more information. 
 
+<br>
 
 ### HILDA
 
@@ -109,6 +117,7 @@ The Household, Income and Labour Dynamics in Australia (HILDA) Survey is a house
 
 Apply to access the data [here](https://melbourneinstitute.unimelb.edu.au/hilda/for-data-users)
 
+<br>
 
 ### Austats
 
@@ -139,21 +148,25 @@ cpi <- abs_cat_stats("6401.0", tables="Table.+1\\D")
 
 Checkout the vignette for how to [download datasets within R](https://cran.r-project.org/web/packages/raustats/vignettes/raustats_introduction.html)
 
+<br>
 
 ### LSAC
 
 The Longitudinal Study of Australian Children data is available, pending completion of confidentiality and data access. [See here](https://www.dss.gov.au/about-the-department/publications-articles/research-publications/longitudinal-data-initiatives/footprints-in-time-the-longitudinal-study-of-indigenous-children-lsic/growing-up-in-australia-the-longitudinal-study-of-australian-children-lsac) for more information.
 
+<br>
 
 ### Marriage Equality Data
 
 Data from the Australian Bureau of Statistics from the 2017 Marriage Equality Postal Survey [can be downloaded here](https://www.abs.gov.au/ausstats/ABS@Archive.nsf/log?openagent&australian_marriage_law_postal_survey_2017_-_participation_final.xls&1800.0&Time%20Series%20Spreadsheet&830FD42482B309D6CA2581F0001A085B&0&2017&11.12.2017&Latest) [response data](https://www.abs.gov.au/ausstats/ABS@Archive.nsf/log?openagent&australian_marriage_law_postal_survey_2017_-_response_final.xls&1800.0&Time%20Series%20Spreadsheet&916379DAEE6E960CCA2581F0001A08A9&0&2017&11.12.2017&Latest).
 
+<br>
 
 ### Footprints in Time: LSIC
 
 The Longitudinal Study of Indigenous Children (LSIC) aims to improve understanding of the issues faced by Aboriginal and Torres Strait Islander children, their families and communities. Data access can be requested through the [website](ttps://www.dss.gov.au/about-the-department/national-centre-for-longitudinal-studies/overview-of-footprints-in-time-the-longitudinal-study-of-indigenous-children-lsic).
 
+<br>
 
 ### Convict Indexes
 
@@ -163,9 +176,13 @@ Convicts were usually given sentences of transportation for seven, 14 years or l
 
 There are seven indexes containing around 140,000 entries in total, which can be accessed through the [website](https://data.gov.au/dataset/ds-nsw-acdd01d0-d700-465c-a183-735c4f139ca0/details).
 
+<br>
+
 ### Indigenous Mortality
 
 Indigenous mortality data from the [indmortality package](https://github.com/robjhyndman/indmortality).
+
+<br>
 
 ### Australian Demographic Data Base
 

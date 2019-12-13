@@ -18,6 +18,8 @@ p1+coord_flip()
 qplot(Syd_beach$Council,log(Syd_beach$`Enterococci (cfu/100ml)`+0.5),data=Syd_beach,geom=c("boxplot"),main="Enterococci",xlab="Council",ylab="Log(cflu/100 ml + 0.5)")
 ```
 
+<br>
+
 ### Environmental river flows
  
 We are going to investigate the relationship between the Murray River average daily water level in metres (WaterLevel) and daily rainfall in mm at Pinegrove on the Murray River (Rainfall) available in the file *PineGrove19Aug19.csv*. It is reasonable to assume that the average daily water level is influenced by rainfall. This data covers the time period from 20 August 2018 to 19 August 2019. This data was extracted from [here](https://riverdata.mdba.gov.au/pinegrove) on 20 August 2019. Other locations could be extracted from [here](https://riverdata.mdba.gov.au/). Only the most recent year of data can be extracted.
@@ -39,37 +41,52 @@ par(mfrow=c(1,1))
  ccf(Pinegrove$WaterLevel, Pinegrove$Rainfall, ylab = "Cross-correlation")
 ```
 
+<br>
 
 ### Birds datasets
 
 Various datasets about Austrlian birds are [here](https://birdata.birdlife.org.au/).
+
+<br>
 
 ### Atlas of living Australia 
 
 Search occurrence records in the ALA by species, taxon, dataset, region, date, location, data provider…
 Access the data [here](https://www.ala.org.au/).
 
+<br>
+
 ### Bush Fires data 
 
 Download Near real-time MODIS (C6) and VIIRS (375 m) active fire data.
 Access the data [here](https://firms.modaps.eosdis.nasa.gov/active_fire/).
+
+<br>
 
 ### Bureau of Meteorology data
 
 The r package *bomrang* [here](https://cran.r-project.org/web/packages/bomrang/bomrang.pdf) has functions that extract Australian Government Bureau
 of Meteorology ('BOM') data.
 
+<br>
+
 ### Queensland Government environmental maps and data online
 
 Environment data is available from links on [here](https://environment.des.qld.gov.au/resources/maps-imagery-data/online).
+
+<br>
 
 ### CSIRO Data Access Portal
 
 Some of the data sets from [here](https://data.csiro.au/dap/browse) are not restricted access.
 
+<br>
+
 ### Australian Ocean Data Network (AODN) Open Access to Ocean Data
 
 Marine and climate science data can be accessed from  [here](https://portal.aodn.org.au/).
+
+<br>
 
 ### Australian fur seal (Brown fur seal) colonies in Victorian marine waters and adjacent Tasmanian waters
 

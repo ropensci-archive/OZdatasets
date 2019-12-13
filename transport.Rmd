@@ -27,6 +27,7 @@ movements %>%
 
 ```
 
+<br>
 
 ### Ozroaddeaths
 
@@ -38,7 +39,7 @@ crashes <- ozroaddeaths::oz_road_fatal_crash()
 # fatalities <- ozroaddeaths::oz_road_fatalities() # NOT WORKING
 ```
 
-
+<br>
 
 ### Vehicle use in Australia 2018
 

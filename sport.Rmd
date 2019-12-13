@@ -20,6 +20,8 @@ install.packages("fitzRoy")
 
 The readme is very informative. 
 
+<br>
+
 ### Cricket data
 
 This is an international cricket data package created at [Ozunconf2017](https://github.com/ropenscilabs/cricketdata). 
