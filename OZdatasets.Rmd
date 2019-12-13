@@ -64,7 +64,9 @@ df<-rbind(c("ozflights", "transport", "package", "Flight data"),
           c("ozdates", "misc", "package", "Maps of Australia"),
           c("smokeybear", "", "package", ""), # TO ADD
           c("learningtower", "", "package", ""), # TO ADD
-          c("hackerspace", "misc", "links", "Access to data from hackerspace projects")
+          c("hackerspace", "misc", "links", "Access to data from hackerspace projects"), 
+          c("indmortality", "demographics", "package", "Indigenous mortality data"),
+          c("demdatabase", "demographics", "package", "Australian demographics data base"),
 )
 
 DT::datatable(df, colnames = c("Name","Topic","Package/Link","Data explanation"), 
