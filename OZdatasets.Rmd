@@ -157,6 +157,8 @@ nsw_hols
 any(nsw_hols$date %within% interval(ymd("2018-04-01"), ymd("2018-05-30")))
 ```
 
+<br>
+
 ### Hackerspace
 
 [Link here](https://hackerspace.govhack.org/data_sets) to various (and copious) csv datasets used in hackerspace projects. 
