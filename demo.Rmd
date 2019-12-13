@@ -135,18 +135,24 @@ str(cpi_all)
 cpi <- abs_cat_stats("6401.0", tables="Table.+1\\D")
 ```
 
-** NOTE: currently not working though an issue has been  ** 
+** NOTE: currently not working though an issue has been ** 
 
 Checkout the vignette for how to [download datasets within R](https://cran.r-project.org/web/packages/raustats/vignettes/raustats_introduction.html)
 
 
-### NLCD
+### LSAC
 
-National centre for longitudinal data (NLCD) datasets are available, pending completion of confidentiality etc. 
-[See here](https://dataverse.ada.edu.au/dataverse/ncld)
+The Longitudinal Study of Australian Children data is available, pending completion of confidentiality and data access. [See here](https://www.dss.gov.au/about-the-department/publications-articles/research-publications/longitudinal-data-initiatives/footprints-in-time-the-longitudinal-study-of-indigenous-children-lsic/growing-up-in-australia-the-longitudinal-study-of-australian-children-lsac) for more information.
 
 
 ### Marriage Equality Data
 
-Data from the Australian Bureau of Statistics from the 2017 Marriage Equality Postal Survey [participation data](https://www.abs.gov.au/ausstats/ABS@Archive.nsf/log?openagent&australian_marriage_law_postal_survey_2017_-_participation_final.xls&1800.0&Time%20Series%20Spreadsheet&830FD42482B309D6CA2581F0001A085B&0&2017&11.12.2017&Latest) [response data](https://www.abs.gov.au/ausstats/ABS@Archive.nsf/log?openagent&australian_marriage_law_postal_survey_2017_-_response_final.xls&1800.0&Time%20Series%20Spreadsheet&916379DAEE6E960CCA2581F0001A08A9&0&2017&11.12.2017&Latest).
+Data from the Australian Bureau of Statistics from the 2017 Marriage Equality Postal Survey [can be downloaded here](https://www.abs.gov.au/ausstats/ABS@Archive.nsf/log?openagent&australian_marriage_law_postal_survey_2017_-_participation_final.xls&1800.0&Time%20Series%20Spreadsheet&830FD42482B309D6CA2581F0001A085B&0&2017&11.12.2017&Latest) [response data](https://www.abs.gov.au/ausstats/ABS@Archive.nsf/log?openagent&australian_marriage_law_postal_survey_2017_-_response_final.xls&1800.0&Time%20Series%20Spreadsheet&916379DAEE6E960CCA2581F0001A08A9&0&2017&11.12.2017&Latest).
+
+
+### Footprints in Time: LSIC
+
+The Longitudinal Study of Indigenous Children (LSIC) aims to improve understanding of the issues faced by Aboriginal and Torres Strait Islander children, their families and communities. Data access can be requested through the [website](ttps://www.dss.gov.au/about-the-department/national-centre-for-longitudinal-studies/overview-of-footprints-in-time-the-longitudinal-study-of-indigenous-children-lsic).
+
+
 
