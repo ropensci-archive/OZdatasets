@@ -1,9 +1,7 @@
-
 ### Beach dataset
 
-The beach data set is made available from
-https://github.com/rladiessydney/RYouWithMe
-with minimal documentation. You need to make you have installed the package readr.
+The beach data set is made available from [here](https://github.com/rladiessydney/RYouWithMe) 
+with minimal documentation. You need to make sure you have installed the package *readr*.
 
 ```{r} 
 library(readr)
@@ -22,7 +20,7 @@ qplot(Syd_beach$Council,log(Syd_beach$`Enterococci (cfu/100ml)`+0.5),data=Syd_be
 
 ### Environmental river flows
  
-We are going to investigate the relationship between the Murray River average daily water level in metres (WaterLevel) and daily rainfall in mm at Pinegrove on the Murray River (Rainfall) available in the file *PineGrove19Aug19.csv*. It is reasonable to assume that the average daily water level is influenced by rainfall. This data covers the time period from 20 August 2018 to 19 August 2019. This data was extracted from https://riverdata.mdba.gov.au/pinegrove on 20 August 2019. Other locations could be extracted from https://riverdata.mdba.gov.au/. Only the most recent year of data can be extracted.
+We are going to investigate the relationship between the Murray River average daily water level in metres (WaterLevel) and daily rainfall in mm at Pinegrove on the Murray River (Rainfall) available in the file *PineGrove19Aug19.csv*. It is reasonable to assume that the average daily water level is influenced by rainfall. This data covers the time period from 20 August 2018 to 19 August 2019. This data was extracted from [here](https://riverdata.mdba.gov.au/pinegrove) on 20 August 2019. Other locations could be extracted from [here](https://riverdata.mdba.gov.au/). Only the most recent year of data can be extracted.
 
 ```{r}
 library(graphics)
