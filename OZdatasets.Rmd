@@ -8,13 +8,13 @@ output:
     highlight: monochrome
     toc: TRUE
     toc_float: TRUE
-    includes:
-      in_header: './images/ropensci_logo.svg'
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE )
 ```
+
 
 This repository was compiled at the rOpenSci OzUnconf19 @ University of Sydney, December 2019. 
 
