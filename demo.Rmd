@@ -72,36 +72,81 @@ macro_datasets <- search_ausmacrodata('births')
 macro_datasets
 ```
 
-
 This dataset was created at BURGr R Unconf 2017. Repo: [ozdata](https://github.com/AU-BURGr/ozdata)
 
 
 ### datagovau
 
+Here we provide tools to programmatically import and explore Australian data sets. Data can be obtained from the official Australian government portal, which catalogues over 40,000 data sets (https://data.gov.au).
+
+```{r, eval = FALSE}
+devtools::install_github("ropenscilabs/datagovau/pkg")
+
+```
+
+#### Example
+
+```{r, eval = TRUE}
+library(dplyr)
+library(datagovau)
+
+# download details of datasets with 'water' in their name:
+res <- search_data("name:water", limit = 20)
+
+# download the datasets in the second pacakge listed their:
+water_data <- res %>% filter(can_use == "yes") %>% slice(1) %>% get_data
+
+# look at the first rectangle of data (at time of writing there were four such rectangles)
+head(water_data[[1]])
+```
+
 Check out [this README file](https://github.com/ropenscilabs/datagovau) on Github for more information. 
 
-###  HILA survey
 
-The Household, Income and Labour Dynamics in Australia (HILDA) Survey is a household-based panel study that collects valuable information about economic and personal well-being, labour market dynamics and family life. It aims to tell the stories of the same group of Australians over the course of their lives.
-Access the data [here](https://melbourneinstitute.unimelb.edu.au/hilda/for-data-users)
+### HILDA
 
-## Austats
+The Household, Income and Labour Dynamics in Australia (HILDA) Survey is a household-based panel study that collects valuable information about economic and personal well-being, labour market dynamics and family life. It aims to tell the stories of the same group of Australians over the course of their lives. It was instrumental in illustrating an increase in births due to the Baby Bonus. [More information can be found here](https://melbourneinstitute.unimelb.edu.au/__data/assets/pdf_file/0010/2437426/HILDA-SR-med-res.pdf). 
+
+Apply to access the data [here](https://melbourneinstitute.unimelb.edu.au/hilda/for-data-users)
+
+
+### Austats
+
+This package allows researchers to quickly search and download selected Australian Bureau of Statistics (ABS) and Reserve Bank of Australia (RBA) data in a programmatic and reproducible fashion. 
 
 ```{r, eval = FALSE}
 install.packages("raustats")
 ```
 
-```{r, eval = TRUE}
+```{r, eval = FALSE}
 library(raustats)
 ```
 
+#### Example
+
+You can download Australian Bureau of Statistics data using the catalogue numbers. 
+
+```{r, eval = FALSE}
+#Download a whole ABS document
+cpi_all <- abs_cat_stats("6401.0")
+str(cpi_all)
+
+#Download a single sheet
+cpi <- abs_cat_stats("6401.0", tables="Table.+1\\D")
+```
+
+** NOTE: currently not working though an issue has been  ** 
+
 Checkout the vignette for how to [download datasets within R](https://cran.r-project.org/web/packages/raustats/vignettes/raustats_introduction.html)
+
 
 ### NLCD
 
 National centre for longitudinal data (NLCD) datasets are available, pending completion of confidentiality etc. 
 [See here](https://dataverse.ada.edu.au/dataverse/ncld)
 
-### Marriage equality data (2017)
+
+### Marriage Equality Data
+
 Data from the Australian Bureau of Statistics from the 2017 Marriage Equality Postal Survey [participation data](https://www.abs.gov.au/ausstats/ABS@Archive.nsf/log?openagent&australian_marriage_law_postal_survey_2017_-_participation_final.xls&1800.0&Time%20Series%20Spreadsheet&830FD42482B309D6CA2581F0001A085B&0&2017&11.12.2017&Latest) [response data](https://www.abs.gov.au/ausstats/ABS@Archive.nsf/log?openagent&australian_marriage_law_postal_survey_2017_-_response_final.xls&1800.0&Time%20Series%20Spreadsheet&916379DAEE6E960CCA2581F0001A08A9&0&2017&11.12.2017&Latest).
 
