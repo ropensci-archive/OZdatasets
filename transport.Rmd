@@ -3,7 +3,7 @@
 
 Flight data from the Bureau of Infrastructure, Transport and Regional Economics [BITRE](https://www.bitre.gov.au/publications), downloaded using the [ozflights package](https://github.com/ropenscilabs/ozflights). See the documentation at https://github.com/ropenscilabs/ozflights. 
 
-```{r flights, warning=FALSE, message=FALSE}
+```{r flights, warning = FALSE, message = FALSE}
 #devtools::install_github("ropenscilabs/ozflights")
 library(tidyverse)
 
@@ -31,11 +31,11 @@ movements %>%
 ### Ozroaddeaths
 
 Ozunconf18 produced a package to easily obtain this data (and did some cleaning). https://github.com/ropenscilabs/ozroaddeaths
-```{r roaddeaths, eval = FALSE, warning=FALSE, message=FALSE}
+```{r roaddeaths, eval = FALSE, warning = FALSE, message = FALSE}
 library(tidyverse)
 
-crashes <- ozroaddeaths::oz_road_fatal_crash() # NOT WORKING
-fatalities <- ozroaddeaths::oz_road_fatalities()
+crashes <- ozroaddeaths::oz_road_fatal_crash() 
+fatalities <- ozroaddeaths::oz_road_fatalities() # NOT WORKING
 ```
 
 
