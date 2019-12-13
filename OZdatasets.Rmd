@@ -4,12 +4,20 @@ author: "Kristy Robledo, Jessica Lee, Alyce Russell, Tania Prvan"
 date: "12/12/2019"
 output: 
   html_document:
-    theme: readable
+    theme: default
     highlight: monochrome
     toc: TRUE
     toc_float: TRUE
 
 ---
+
+```{js logo-js, echo=FALSE}
+$(document).ready(function() {
+  $('#header').parent().prepend('<div id=\"logo\"><img src=\"./images/ropensci_logo.svg\" style=\"position:absolute; top:0; right:0; padding:20px; height:150px\"></div>');
+  $('#header').css('margin-right', '120px')
+});
+```
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE )
@@ -46,7 +54,12 @@ df<-rbind(c("ozflights", "transport", "package", "Flight data"),
           c("learningtower", "", "package", "") # TO ADD
 )
 
-DT::datatable(df, colnames = c("Name","Topic","Package/Link","Data explanation"))
+DT::datatable(df, colnames = c("Name","Topic","Package/Link","Data explanation"), 
+              options = list(
+                pageLength = 20,
+                lengthMenu = c(10, 20, 50)
+              )
+)
 
 ```
 
