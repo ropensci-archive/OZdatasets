@@ -33,8 +33,8 @@ Its purpose is to document datasets previously created at OzUnconf events, as we
 </div>
 
 ## Summary table
-<!--html_preserve--><div id="htmlwidget-4d5e11372713b0070fd2" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4d5e11372713b0070fd2">{"x":{"filter":"none","data":[["ozflights","ozroaddeaths","vehicles","beaches","river","birds","atlas","fires","ozbabynames","eechidna","ozdata","raustats","longitudinal","marriageequality","aflinfo","fitzRoy","cricketdata","ozmaps","ozdates","smokeybear","learningtower"],["transport","transport","transport","environment","environment","environment","environment","environment","demographics","demographics","demographics","demographics","demographics","demographics","sport","sport","sport","maps","misc","",""],["package","package","link","link","link","link","link","link","package","package","package","package-BROKEN??","link","link","package","package","package","package","package","package","package"],["Flight data","Road deaths","Vehicle use","Sydney beach data","River and rainfall data","Data about Australian birds","Atlas of Australian biodiversity","Bush fire data","Baby names in Australia","Election and census data","Australian economic data","Household survey","Longitudinal","Data from the 2017 marriage equality survey","AFL data","AFL data","Cricket data","Maps of Australia","Maps of Australia","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Name<\/th>\n      <th>Topic<\/th>\n      <th>Package/Link<\/th>\n      <th>Data explanation<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"lengthMenu":[10,20,50],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-1e798517f240d6693029" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1e798517f240d6693029">{"x":{"filter":"none","data":[["ozflights","ozroaddeaths","vehicles","beaches","river","birds","atlas","fires","bomrang","QOL enviro","CSIRO data","Ocean data","DataVic","ozbabynames","eechidna","ozdata","raustats","longitudinal","marriageequality","aflinfo","fitzRoy","cricketdata","ozmaps","ozdates","smokeybear","learningtower","hackerspace","indmortality","demdatabase"],["transport","transport","transport","environment","environment","environment","environment","environment","environment","environment","environment","environment","environment","demographics","demographics","demographics","demographics","demographics","demographics","sport","sport","sport","maps","misc","OzUncon19","OzUncon19","misc","demographics","demographics"],["package","package","link","link","link","link","link","link","package","links","links","links","links","package","package","package","package-BROKEN??","link","link","package","package","package","package","package","package","package","links","package","package"],["Flight data","Road deaths","Vehicle use","Sydney beach data","River and rainfall data","Data about Australian birds","Atlas of Australian biodiversity","Bush fire data","access to BOM data","links to QLD environment and Maps data","CSIRO data portal, some behind confidentiality","Australian ocean data network","Access to enironmental and non environmental data from DataVic","Baby names in Australia","Election and census data","Australian economic data","Household survey","Longitudinal","Data from the 2017 marriage equality survey","AFL data","AFL data","Cricket data","Maps of Australia","Maps of Australia","Air quality datasets","PISA data ","Access to data from hackerspace projects","Indigenous mortality data","Australian demographics data base"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Name<\/th>\n      <th>Topic<\/th>\n      <th>Package/Link<\/th>\n      <th>Data explanation<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"lengthMenu":[10,20,50],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
 <div style="margin-bottom:50px;">
 </div>
@@ -77,6 +77,7 @@ movements %>%
 
 ![](OZdatasets_files/figure-html/flights-2.png)<!-- -->
 
+<br>
 
 ### Ozroaddeaths
 
@@ -86,10 +87,10 @@ Ozunconf18 produced a package to easily obtain this data (and did some cleaning)
 library(tidyverse)
 
 crashes <- ozroaddeaths::oz_road_fatal_crash() 
-fatalities <- ozroaddeaths::oz_road_fatalities() # NOT WORKING
+# fatalities <- ozroaddeaths::oz_road_fatalities() # NOT WORKING
 ```
 
-
+<br>
 
 ### Vehicle use in Australia 2018
 
@@ -218,6 +219,8 @@ qplot(Syd_beach$Council,log(Syd_beach$`Enterococci (cfu/100ml)`+0.5),data=Syd_be
 
 ![](OZdatasets_files/figure-html/unnamed-chunk-10-2.png)<!-- -->
 
+<br>
+
 ### Environmental river flows
  
 We are going to investigate the relationship between the Murray River average daily water level in metres (WaterLevel) and daily rainfall in mm at Pinegrove on the Murray River (Rainfall) available in the file *PineGrove19Aug19.csv*. It is reasonable to assume that the average daily water level is influenced by rainfall. This data covers the time period from 20 August 2018 to 19 August 2019. This data was extracted from [here](https://riverdata.mdba.gov.au/pinegrove) on 20 August 2019. Other locations could be extracted from [here](https://riverdata.mdba.gov.au/). Only the most recent year of data can be extracted.
@@ -285,41 +288,67 @@ par(mfrow=c(1,1))
 
 ![](OZdatasets_files/figure-html/unnamed-chunk-11-3.png)<!-- -->
 
+<br>
 
 ### Birds datasets
 
 Various datasets about Austrlian birds are [here](https://birdata.birdlife.org.au/).
+
+<br>
 
 ### Atlas of living Australia 
 
 Search occurrence records in the ALA by species, taxon, dataset, region, date, location, data provider…
 Access the data [here](https://www.ala.org.au/).
 
+<br>
+
 ### Bush Fires data 
 
 Download Near real-time MODIS (C6) and VIIRS (375 m) active fire data.
 Access the data [here](https://firms.modaps.eosdis.nasa.gov/active_fire/).
+
+<br>
 
 ### Bureau of Meteorology data
 
 The r package *bomrang* [here](https://cran.r-project.org/web/packages/bomrang/bomrang.pdf) has functions that extract Australian Government Bureau
 of Meteorology ('BOM') data.
 
+<br>
+
 ### Queensland Government environmental maps and data online
 
 Environment data is available from links on [here](https://environment.des.qld.gov.au/resources/maps-imagery-data/online).
+
+<br>
 
 ### CSIRO Data Access Portal
 
 Some of the data sets from [here](https://data.csiro.au/dap/browse) are not restricted access.
 
+<br>
+
 ### Australian Ocean Data Network (AODN) Open Access to Ocean Data
 
 Marine and climate science data can be accessed from  [here](https://portal.aodn.org.au/).
 
+<br>
+
 ### Australian fur seal (Brown fur seal) colonies in Victorian marine waters and adjacent Tasmanian waters
 
 This can be ordered free from  [here](https://discover.data.vic.gov.au/dataset/australian-fur-seal-brown-fur-seal-colonies-in-victorian-marine-waters-and-adjacent-tasmanian-w) which comes from *DataVic* which is the place to discover and access Victorian Government open data. See [here](https://data.vic.gov.au/) for access to other data sets. 
+
+<br>
+
+### Smokeybear
+
+Participants at rOpenSci OzUnconf19 developed a package on the air quality in NSW - daily average AQI in NSW from 2014-2019. 
+
+
+```r
+devtools::install_github("ropenscilabs/smoky")
+```
 
 
 <div style="margin-bottom:50px;">
@@ -355,6 +384,7 @@ str(ozbabynames)
 
 This dataset was created at rOpenSci OzUnconf 2019. Repo: [ozbabynames](https://github.com/ropenscilabs/ozbabynames)
 
+<br>
 
 ### eechidna
 
@@ -364,6 +394,8 @@ This package contains datasets from the Australian Federal elections in 2001, 20
 ```r
 devtools::install_github("ropenscilabs/eechidna")
 ```
+
+<br> 
 
 #### Australian Federal Elections Datasets
 
@@ -488,6 +520,8 @@ str(eechidna::fp16)
 ##  $ OrdinaryVotes  : num  55091 19200 6013 48416 56796 ...
 ##  $ Percent        : num  42.8 14.92 4.67 37.61 45.8 ...
 ```
+
+<br> 
 
 #### Australian Federal Elections Datasets
 
@@ -993,6 +1027,7 @@ str(eechidna::abs2016)
 
 These datasets were created at rOpenSci auunconf 2016. Repo: [eechidna](https://github.com/ropenscilabs/eechidna)
 
+<br>
 
 ### ozmacrodata
 
@@ -1020,6 +1055,7 @@ macro_datasets
 
 This dataset was created at BURGr R Unconf 2017. Repo: [ozdata](https://github.com/AU-BURGr/ozdata)
 
+<br>
 
 ### datagovau
 
@@ -1083,6 +1119,7 @@ head(water_data[[1]])
 
 Check out [this README file](https://github.com/ropenscilabs/datagovau) on Github for more information. 
 
+<br>
 
 ### HILDA
 
@@ -1090,6 +1127,7 @@ The Household, Income and Labour Dynamics in Australia (HILDA) Survey is a house
 
 Apply to access the data [here](https://melbourneinstitute.unimelb.edu.au/hilda/for-data-users)
 
+<br>
 
 ### Austats
 
@@ -1123,21 +1161,25 @@ cpi <- abs_cat_stats("6401.0", tables="Table.+1\\D")
 
 Checkout the vignette for how to [download datasets within R](https://cran.r-project.org/web/packages/raustats/vignettes/raustats_introduction.html)
 
+<br>
 
 ### LSAC
 
 The Longitudinal Study of Australian Children data is available, pending completion of confidentiality and data access. [See here](https://www.dss.gov.au/about-the-department/publications-articles/research-publications/longitudinal-data-initiatives/footprints-in-time-the-longitudinal-study-of-indigenous-children-lsic/growing-up-in-australia-the-longitudinal-study-of-australian-children-lsac) for more information.
 
+<br>
 
 ### Marriage Equality Data
 
 Data from the Australian Bureau of Statistics from the 2017 Marriage Equality Postal Survey [can be downloaded here](https://www.abs.gov.au/ausstats/ABS@Archive.nsf/log?openagent&australian_marriage_law_postal_survey_2017_-_participation_final.xls&1800.0&Time%20Series%20Spreadsheet&830FD42482B309D6CA2581F0001A085B&0&2017&11.12.2017&Latest) [response data](https://www.abs.gov.au/ausstats/ABS@Archive.nsf/log?openagent&australian_marriage_law_postal_survey_2017_-_response_final.xls&1800.0&Time%20Series%20Spreadsheet&916379DAEE6E960CCA2581F0001A08A9&0&2017&11.12.2017&Latest).
 
+<br>
 
 ### Footprints in Time: LSIC
 
 The Longitudinal Study of Indigenous Children (LSIC) aims to improve understanding of the issues faced by Aboriginal and Torres Strait Islander children, their families and communities. Data access can be requested through the [website](ttps://www.dss.gov.au/about-the-department/national-centre-for-longitudinal-studies/overview-of-footprints-in-time-the-longitudinal-study-of-indigenous-children-lsic).
 
+<br>
 
 ### Convict Indexes
 
@@ -1147,6 +1189,34 @@ Convicts were usually given sentences of transportation for seven, 14 years or l
 
 There are seven indexes containing around 140,000 entries in total, which can be accessed through the [website](https://data.gov.au/dataset/ds-nsw-acdd01d0-d700-465c-a183-735c4f139ca0/details).
 
+<br>
+
+### Indigenous Mortality
+
+Indigenous mortality data from the [indmortality package](https://github.com/robjhyndman/indmortality).
+
+<br>
+
+### Australian Demographic Data Base
+
+Demographic database from the [addb package](https://github.com/robjhyndman/addb).
+
+<br>
+
+### Learning tower
+
+The goal of learningtower is to provide a userfriendly R package to provide easy access to a subset of variables from PISA data collected from the OECD, for years 2000 - 2018, collected on a three year basis.
+
+The Programme for International Student Assessment (PISA) is an international assessment measuring student performance in reading, mathematical and scientific literacy.
+
+PISA assesses the extent to which 15-year-old students have acquired some of the knowledge and skills that are essential for full participation in society, and how well they are prepared for lifelong learning in the areas of reading, mathematical and scientific literacy
+
+In 2018, PISA involved 79 countries and 600,000+ students worldwide.
+
+
+```r
+devtools::install_github("ropenscilabs/learningtower")
+```
 
 
 <div style="margin-bottom:50px;">
@@ -1266,6 +1336,8 @@ install.packages("fitzRoy")
 
 The readme is very informative. 
 
+<br>
+
 ### Cricket data
 
 This is an international cricket data package created at [Ozunconf2017](https://github.com/ropenscilabs/cricketdata). 
@@ -1364,5 +1436,11 @@ any(nsw_hols$date %within% interval(ymd("2018-04-01"), ymd("2018-05-30")))
 ```
 ## [1] TRUE
 ```
+
+<br>
+
+### Hackerspace
+
+[Link here](https://hackerspace.govhack.org/data_sets) to various (and copious) csv datasets used in hackerspace projects. 
 
 

@@ -31,12 +31,25 @@ movements %>%
 
 ### Ozroaddeaths
 
-Ozunconf18 produced a package to easily obtain this data (and did some cleaning). https://github.com/ropenscilabs/ozroaddeaths
-```{r roaddeaths, eval = FALSE, warning = FALSE, message = FALSE}
+Ozunconf18 produced a package to easily obtain this data (and did some cleaning). Check the [README](https://github.com/ropenscilabs/ozroaddeaths).
+
+```{r, eval = FALSE}
+devtools::install_github('ropenscilabs/ozroaddeaths')
+```
+
+
+```{r roaddeaths, eval = TRUE, warning = FALSE, message = FALSE}
 library(tidyverse)
 
 crashes <- ozroaddeaths::oz_road_fatal_crash() 
-# fatalities <- ozroaddeaths::oz_road_fatalities() # NOT WORKING
+fatalities <- ozroaddeaths::oz_road_fatalities() 
+
+crash_plot <- ggplot(crashes, aes(x=year)) +
+  geom_line(stat = "count") +
+  theme_minimal() +
+  ggtitle("Annual Fatal Car Accidents")
+
+crash_plot
 ```
 
 <br>

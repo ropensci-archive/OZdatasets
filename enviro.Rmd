@@ -92,3 +92,13 @@ Marine and climate science data can be accessed from  [here](https://portal.aodn
 
 This can be ordered free from  [here](https://discover.data.vic.gov.au/dataset/australian-fur-seal-brown-fur-seal-colonies-in-victorian-marine-waters-and-adjacent-tasmanian-w) which comes from *DataVic* which is the place to discover and access Victorian Government open data. See [here](https://data.vic.gov.au/) for access to other data sets. 
 
+<br>
+
+### Smokeybear
+
+Participants at rOpenSci OzUnconf19 developed a package on the air quality in NSW - daily average AQI in NSW from 2014-2019. 
+
+```{r, eval=FALSE}
+devtools::install_github("ropenscilabs/smoky")
+```
+

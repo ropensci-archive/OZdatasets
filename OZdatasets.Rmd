@@ -62,11 +62,11 @@ df<-rbind(c("ozflights", "transport", "package", "Flight data"),
           c("cricketdata", "sport", "package", "Cricket data"),
           c("ozmaps", "maps", "package", "Maps of Australia"),
           c("ozdates", "misc", "package", "Maps of Australia"),
-          c("smokeybear", "OzUncon19", "package", "Air quality datasets"), # TO ADD
-          c("learningtower", "OzUncon19", "package", "PISA data "), # TO ADD
+          c("smokeybear", "OzUncon19", "package", "Air quality datasets"), 
+          c("learningtower", "OzUncon19", "package", "PISA data "), 
           c("hackerspace", "misc", "links", "Access to data from hackerspace projects"), 
           c("indmortality", "demographics", "package", "Indigenous mortality data"),
-          c("demdatabase", "demographics", "package", "Australian demographics data base"),
+          c("demdatabase", "demographics", "package", "Australian demographics data base")
 )
 
 DT::datatable(df, colnames = c("Name","Topic","Package/Link","Data explanation"), 
@@ -165,23 +165,4 @@ any(nsw_hols$date %within% interval(ymd("2018-04-01"), ymd("2018-05-30")))
 
 [Link here](https://hackerspace.govhack.org/data_sets) to various (and copious) csv datasets used in hackerspace projects. 
 
-## Smokeybear
 
-OzUnconf19 developed a package on the air quality in NSW - daily average AQI in NSW from 2014-2019. 
-```{r, eval=FALSE}
-devtools::install_github("ropenscilabs/smoky")
-```
-
-## Learning tower
-
-The goal of learningtower is to provide a userfriendly R package to provide easy access to a subset of variables from PISA data collected from the OECD, for years 2000 - 2018, collected on a three year basis.
-
-The Programme for International Student Assessment (PISA) is an international assessment measuring student performance in reading, mathematical and scientific literacy.
-
-PISA assesses the extent to which 15-year-old students have acquired some of the knowledge and skills that are essential for full participation in society, and how well they are prepared for lifelong learning in the areas of reading, mathematical and scientific literacy
-
-In 2018, PISA involved 79 countries and 600,000+ students worldwide.
-
-```{r, eval=FALSE}
-devtools::install_github("ropenscilabs/learningtower")
-```
