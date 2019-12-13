@@ -45,6 +45,12 @@ df<-rbind(c("ozflights", "transport", "package", "Flight data"),
           c("birds", "environment", "link", "Data about Australian birds"),
           c("atlas", "environment", "link", "Atlas of Australian biodiversity"),
           c("fires", "environment", "link", "Bush fire data"),
+          c("bomrang", "environment", "package", "access to BOM data"), 
+          c("QOL enviro", "environment", "links", "links to QLD environment and Maps data"), 
+          c("CSIRO data", "environment", "links", "CSIRO data portal, some behind confidentiality"),
+          c("Ocean data", "environment", "links", "Australian ocean data network"), 
+          c("DataVic", "environment", "links", "Access to enironmental and non environmental data from DataVic"),
+          
           c("ozbabynames", "demographics", "package", "Baby names in Australia"),
           c("eechidna", "demographics", "package", "Election and census data"),
           c("ozdata", "demographics", "package", "Australian economic data"),
@@ -57,7 +63,8 @@ df<-rbind(c("ozflights", "transport", "package", "Flight data"),
           c("ozmaps", "maps", "package", "Maps of Australia"),
           c("ozdates", "misc", "package", "Maps of Australia"),
           c("smokeybear", "", "package", ""), # TO ADD
-          c("learningtower", "", "package", "") # TO ADD
+          c("learningtower", "", "package", ""), # TO ADD
+          c("hackerspace", "misc", "links", "Access to data from hackerspace projects")
 )
 
 DT::datatable(df, colnames = c("Name","Topic","Package/Link","Data explanation"), 
@@ -150,4 +157,7 @@ nsw_hols
 any(nsw_hols$date %within% interval(ymd("2018-04-01"), ymd("2018-05-30")))
 ```
 
+### Hackerspace
+
+[Link here](https://hackerspace.govhack.org/data_sets) to various (and copious) csv datasets used in hackerspace projects. 
 
