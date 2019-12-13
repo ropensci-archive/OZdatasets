@@ -4,11 +4,11 @@ author: "Kristy Robledo, Jessica Lee, Alyce Russell, Tania Prvan"
 date: "12/12/2019"
 output: 
   html_document:
+    keep_md: TRUE 
     theme: default
     highlight: monochrome
     toc: TRUE
     toc_float: TRUE
-
 ---
 
 ```{js logo-js, echo=FALSE}
