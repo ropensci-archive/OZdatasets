@@ -155,4 +155,12 @@ Data from the Australian Bureau of Statistics from the 2017 Marriage Equality Po
 The Longitudinal Study of Indigenous Children (LSIC) aims to improve understanding of the issues faced by Aboriginal and Torres Strait Islander children, their families and communities. Data access can be requested through the [website](ttps://www.dss.gov.au/about-the-department/national-centre-for-longitudinal-studies/overview-of-footprints-in-time-the-longitudinal-study-of-indigenous-children-lsic).
 
 
+### Convict Indexes
+
+Between 1788 and 1842 about 80,000 convicts were transported to New South Wales. Of these, about 85% were men and 15% were women. Almost two thirds of convicts were English (along with a small number of Scottish and Welsh), with the Irish making up the remaining one third.
+
+Convicts were usually given sentences of transportation for seven, 14 years or life. Some convicts in the 1830s received ten-year sentences. About one quarter of the convicts were sentenced to ‘the term of their natural lives’, and a proportion of these had reprieves from the death sentence.
+
+There are seven indexes containing around 140,000 entries in total, which can be accessed through the [website](https://data.gov.au/dataset/ds-nsw-acdd01d0-d700-465c-a183-735c4f139ca0/details).
+
 
