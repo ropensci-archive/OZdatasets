@@ -104,7 +104,10 @@ DT::datatable(df, colnames = c("Name","Topic","Package/Link","Data explanation")
 <div style="margin-bottom:50px;">
 </div>
 
-## Maps
+
+## Miscellaneous 
+
+### ozmaps
 
 The [README file](https://github.com/mdsumner/ozmaps/) is very descriptive for how to create Maps of australia in ggplot. 
 
@@ -119,19 +122,16 @@ library(ozmaps)
 ozmap(x = "country")
 ```
 
-<div style="margin-bottom:50px;">
-</div>
+<br/>  
 
-## Miscellaneous 
 
-### Ozdates
+### ozdates
 
 The goal of ozdates is to provide historical data of important Australian dates to help with data analysis and time series modelling. The [README](https://deanmarchiori.github.io/ozdates/) is on Github. 
 ```{r, eval=FALSE}
 devtools::install_github("deanmarchiori/ozdates")
 ```
 
-#### Example
 
 ```{r}
 library(ozdates)

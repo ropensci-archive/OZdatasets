@@ -33,8 +33,8 @@ Its purpose is to document datasets previously created at OzUnconf events, as we
 </div>
 
 ## Summary table
-<!--html_preserve--><div id="htmlwidget-ef11b76978342be4ecb0" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ef11b76978342be4ecb0">{"x":{"filter":"none","data":[["ozflights","ozroaddeaths","vehicles","beaches","river","birds","atlas","fires","ozbabynames","eechidna","ozdata","raustats","longitudinal","marriageequality","aflinfo","fitzRoy","cricketdata","ozmaps","ozdates","smokeybear","learningtower"],["transport","transport","transport","environment","environment","environment","environment","environment","demographics","demographics","demographics","demographics","demographics","demographics","sport","sport","sport","maps","misc","",""],["package","package","link","link","link","link","link","link","package","package","package","package-BROKEN??","link","link","package","package","package","package","package","package","package"],["Flight data","Road deaths","Vehicle use","Sydney beach data","River and rainfall data","Data about Australian birds","Atlas of Australian biodiversity","Bush fire data","Baby names in Australia","Election and census data","Australian economic data","Household survey","Longitudinal","Data from the 2017 marriage equality survey","AFL data","AFL data","Cricket data","Maps of Australia","Maps of Australia","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Name<\/th>\n      <th>Topic<\/th>\n      <th>Package/Link<\/th>\n      <th>Data explanation<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"lengthMenu":[10,20,50],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-4d5e11372713b0070fd2" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4d5e11372713b0070fd2">{"x":{"filter":"none","data":[["ozflights","ozroaddeaths","vehicles","beaches","river","birds","atlas","fires","ozbabynames","eechidna","ozdata","raustats","longitudinal","marriageequality","aflinfo","fitzRoy","cricketdata","ozmaps","ozdates","smokeybear","learningtower"],["transport","transport","transport","environment","environment","environment","environment","environment","demographics","demographics","demographics","demographics","demographics","demographics","sport","sport","sport","maps","misc","",""],["package","package","link","link","link","link","link","link","package","package","package","package-BROKEN??","link","link","package","package","package","package","package","package","package"],["Flight data","Road deaths","Vehicle use","Sydney beach data","River and rainfall data","Data about Australian birds","Atlas of Australian biodiversity","Bush fire data","Baby names in Australia","Election and census data","Australian economic data","Household survey","Longitudinal","Data from the 2017 marriage equality survey","AFL data","AFL data","Cricket data","Maps of Australia","Maps of Australia","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Name<\/th>\n      <th>Topic<\/th>\n      <th>Package/Link<\/th>\n      <th>Data explanation<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"lengthMenu":[10,20,50],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
 <div style="margin-bottom:50px;">
 </div>
@@ -1289,7 +1289,10 @@ The [readme is really useful](https://github.com/ropenscilabs/cricketdata) and d
 <div style="margin-bottom:50px;">
 </div>
 
-## Maps
+
+## Miscellaneous 
+
+### ozmaps
 
 The [README file](https://github.com/mdsumner/ozmaps/) is very descriptive for how to create Maps of australia in ggplot. 
 
@@ -1308,12 +1311,10 @@ ozmap(x = "country")
 
 ![](OZdatasets_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
-<div style="margin-bottom:50px;">
-</div>
+<br/>  
 
-## Miscellaneous 
 
-### Ozdates
+### ozdates
 
 The goal of ozdates is to provide historical data of important Australian dates to help with data analysis and time series modelling. The [README](https://deanmarchiori.github.io/ozdates/) is on Github. 
 
@@ -1321,7 +1322,6 @@ The goal of ozdates is to provide historical data of important Australian dates 
 devtools::install_github("deanmarchiori/ozdates")
 ```
 
-#### Example
 
 
 ```r

@@ -315,8 +315,8 @@ $(document).ready(function() {
 </div>
 <div id="summary-table" class="section level2">
 <h2>Summary table</h2>
-<div id="htmlwidget-85a519ea1e42e26964a9" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-85a519ea1e42e26964a9">{"x":{"filter":"none","data":[["ozflights","ozroaddeaths","vehicles","beaches","river","birds","atlas","fires","ozbabynames","eechidna","ozdata","raustats","longitudinal","marriageequality","aflinfo","fitzRoy","cricketdata","ozmaps","ozdates","smokeybear","learningtower"],["transport","transport","transport","environment","environment","environment","environment","environment","demographics","demographics","demographics","demographics","demographics","demographics","sport","sport","sport","maps","misc","",""],["package","package","link","link","link","link","link","link","package","package","package","package-BROKEN??","link","link","package","package","package","package","package","package","package"],["Flight data","Road deaths","Vehicle use","Sydney beach data","River and rainfall data","Data about Australian birds","Atlas of Australian biodiversity","Bush fire data","Baby names in Australia","Election and census data","Australian economic data","Household survey","Longitudinal","Data from the 2017 marriage equality survey","AFL data","AFL data","Cricket data","Maps of Australia","Maps of Australia","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Name<\/th>\n      <th>Topic<\/th>\n      <th>Package/Link<\/th>\n      <th>Data explanation<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"lengthMenu":[10,20,50],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-4d5e11372713b0070fd2" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4d5e11372713b0070fd2">{"x":{"filter":"none","data":[["ozflights","ozroaddeaths","vehicles","beaches","river","birds","atlas","fires","ozbabynames","eechidna","ozdata","raustats","longitudinal","marriageequality","aflinfo","fitzRoy","cricketdata","ozmaps","ozdates","smokeybear","learningtower"],["transport","transport","transport","environment","environment","environment","environment","environment","demographics","demographics","demographics","demographics","demographics","demographics","sport","sport","sport","maps","misc","",""],["package","package","link","link","link","link","link","link","package","package","package","package-BROKEN??","link","link","package","package","package","package","package","package","package"],["Flight data","Road deaths","Vehicle use","Sydney beach data","River and rainfall data","Data about Australian birds","Atlas of Australian biodiversity","Bush fire data","Baby names in Australia","Election and census data","Australian economic data","Household survey","Longitudinal","Data from the 2017 marriage equality survey","AFL data","AFL data","Cricket data","Maps of Australia","Maps of Australia","",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Name<\/th>\n      <th>Topic<\/th>\n      <th>Package/Link<\/th>\n      <th>Data explanation<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"lengthMenu":[10,20,50],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <div style="margin-bottom:50px;">
 
 </div>
@@ -353,8 +353,8 @@ passengers <span class="op">%&gt;%</span>
 <p>Ozunconf18 produced a package to easily obtain this data (and did some cleaning). <a href="https://github.com/ropenscilabs/ozroaddeaths" class="uri">https://github.com/ropenscilabs/ozroaddeaths</a></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
 
-crashes &lt;-<span class="st"> </span>ozroaddeaths<span class="op">::</span><span class="kw">oz_road_fatal_crash</span>() <span class="co"># NOT WORKING</span>
-fatalities &lt;-<span class="st"> </span>ozroaddeaths<span class="op">::</span><span class="kw">oz_road_fatalities</span>()</code></pre></div>
+crashes &lt;-<span class="st"> </span>ozroaddeaths<span class="op">::</span><span class="kw">oz_road_fatal_crash</span>() 
+fatalities &lt;-<span class="st"> </span>ozroaddeaths<span class="op">::</span><span class="kw">oz_road_fatalities</span>() <span class="co"># NOT WORKING</span></code></pre></div>
 </div>
 <div id="vehicle-use-in-australia-2018" class="section level3">
 <h3>Vehicle use in Australia 2018</h3>
@@ -1242,8 +1242,10 @@ cpi &lt;-<span class="st"> </span><span class="kw">abs_cat_stats</span>(<span cl
 </div>
 </div>
 </div>
-<div id="maps" class="section level2">
-<h2>Maps</h2>
+<div id="miscellaneous" class="section level2">
+<h2>Miscellaneous</h2>
+<div id="ozmaps" class="section level3">
+<h3>ozmaps</h3>
 <p>The <a href="https://github.com/mdsumner/ozmaps/">README file</a> is very descriptive for how to create Maps of australia in ggplot.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;ozmaps&quot;</span>)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ozmaps)
@@ -1251,18 +1253,12 @@ cpi &lt;-<span class="st"> </span><span class="kw">abs_cat_stats</span>(<span cl
 <span class="co">#map of Australia</span>
 <span class="kw">ozmap</span>(<span class="dt">x =</span> <span class="st">&quot;country&quot;</span>)</code></pre></div>
 <p><img src="data:image/png;base64,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" /><!-- --></p>
-<div style="margin-bottom:50px;">
-
+<p><br /></p>
 </div>
-</div>
-<div id="miscellaneous" class="section level2">
-<h2>Miscellaneous</h2>
 <div id="ozdates" class="section level3">
-<h3>Ozdates</h3>
+<h3>ozdates</h3>
 <p>The goal of ozdates is to provide historical data of important Australian dates to help with data analysis and time series modelling. The <a href="https://deanmarchiori.github.io/ozdates/">README</a> is on Github.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;deanmarchiori/ozdates&quot;</span>)</code></pre></div>
-<div id="example-2" class="section level4">
-<h4>Example</h4>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ozdates)
 <span class="kw">library</span>(dplyr)
 <span class="kw">library</span>(lubridate)
@@ -1292,7 +1288,6 @@ nsw_hols</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Are there any public holidays in the next 2 months?</span>
 <span class="kw">any</span>(nsw_hols<span class="op">$</span>date <span class="op">%within%</span><span class="st"> </span><span class="kw">interval</span>(<span class="kw">ymd</span>(<span class="st">&quot;2018-04-01&quot;</span>), <span class="kw">ymd</span>(<span class="st">&quot;2018-05-30&quot;</span>)))</code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-</div>
 </div>
 </div>
 
