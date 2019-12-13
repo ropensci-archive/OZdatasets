@@ -42,21 +42,21 @@ par(mfrow=c(1,1))
 
 ### Birds datasets
 
-Various datasets about Austrlian birds are [here](https://birdata.birdlife.org.au/). Simply 
+Various datasets about Austrlian birds are [here](https://birdata.birdlife.org.au/).
 
 ### Atlas of living Australia 
 
 Search occurrence records in the ALA by species, taxon, dataset, region, date, location, data provider…
-Access the data [here](https://www.ala.org.au/)
+Access the data [here](https://www.ala.org.au/).
 
 ### Bush Fires data 
 
 Download Near real-time MODIS (C6) and VIIRS (375 m) active fire data.
-Access the data [here](https://firms.modaps.eosdis.nasa.gov/active_fire/)
+Access the data [here](https://firms.modaps.eosdis.nasa.gov/active_fire/).
 
 ### Bureau of Meteorology data
 
-The r package *bomrang* [here](https://cran.r-project.org/web/packages/bomrang/bomrang.pdf) has functions that extracts Australian Government Bureau
+The r package *bomrang* [here](https://cran.r-project.org/web/packages/bomrang/bomrang.pdf) has functions that extract Australian Government Bureau
 of Meteorology ('BOM') data.
 
 ### Queensland Government environmental maps and data online
