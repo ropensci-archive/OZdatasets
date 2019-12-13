@@ -1,8 +1,13 @@
 ---
 title: "OZdatasets"
-author: "Kristy Robledo, Jessica Lee, Alyce Russell, Tanya Prvan"
+author: "Kristy Robledo, Jessica Lee, Alyce Russell, Tania Prvan"
 date: "12/12/2019"
-output: html_document
+output: 
+  html_document:
+    theme: readable
+    highlight: espresso
+    toc: TRUE
+    toc_float: TRUE
 ---
 
 ```{r setup, include=FALSE}
@@ -76,7 +81,7 @@ library(ozmaps)
 
 ### Ozdates
 
-Important australian dates, like public holidays etc. The readme on [github](https://deanmarchiori.github.io/ozdates/) explains how to use. 
+Important australian dates, like public holidays, in a downloadable file. The README is on [github](https://deanmarchiori.github.io/ozdates/) explains how to use. 
 
 ```{r, eval=FALSE}
 devtools::install_github("deanmarchiori/ozdates")
