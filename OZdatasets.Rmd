@@ -5,17 +5,23 @@ date: "12/12/2019"
 output: 
   html_document:
     theme: readable
-    highlight: espresso
+    highlight: monochrome
     toc: TRUE
     toc_float: TRUE
+    includes:
+      in_header: './images/ropensci_logo.svg'
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE )
 ```
 
+This repository was compiled at the rOpenSci OzUnconf19 @ University of Sydney, December 2019. 
+
+Its purpose is to document datasets previously created at OzUnconf events, as well as other interesting and unique Australian datasets and resources. We have made our best attempt to have these links/packages functioning. However, in the case of errors still existing, an issue has been logged on Github. 
+
 ## Summary table
-```{r}
+```{r, echo = FALSE}
 library(DT)
 df<-rbind(c("ozflights", "transport", "package", "Flight data"),
           c("ozroaddeaths", "transport", "package", "Road deaths"),

@@ -31,7 +31,7 @@ movements %>%
 ### Ozroaddeaths
 
 Ozunconf18 produced a package to easily obtain this data (and did some cleaning). https://github.com/ropenscilabs/ozroaddeaths
-```{r roaddeaths, warning=FALSE, message=FALSE}
+```{r roaddeaths, eval = FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
 
 crashes <- ozroaddeaths::oz_road_fatal_crash() # NOT WORKING
