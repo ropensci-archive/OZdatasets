@@ -35,7 +35,7 @@ Ozunconf18 produced a package to easily obtain this data (and did some cleaning)
 library(tidyverse)
 
 crashes <- ozroaddeaths::oz_road_fatal_crash() 
-fatalities <- ozroaddeaths::oz_road_fatalities() # NOT WORKING
+# fatalities <- ozroaddeaths::oz_road_fatalities() # NOT WORKING
 ```
 
 
