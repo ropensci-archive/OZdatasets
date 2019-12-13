@@ -33,8 +33,8 @@ Its purpose is to document datasets previously created at OzUnconf events, as we
 </div>
 
 ## Summary table
-<!--html_preserve--><div id="htmlwidget-1e798517f240d6693029" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1e798517f240d6693029">{"x":{"filter":"none","data":[["ozflights","ozroaddeaths","vehicles","beaches","river","birds","atlas","fires","bomrang","QOL enviro","CSIRO data","Ocean data","DataVic","ozbabynames","eechidna","ozdata","raustats","longitudinal","marriageequality","aflinfo","fitzRoy","cricketdata","ozmaps","ozdates","smokeybear","learningtower","hackerspace","indmortality","demdatabase"],["transport","transport","transport","environment","environment","environment","environment","environment","environment","environment","environment","environment","environment","demographics","demographics","demographics","demographics","demographics","demographics","sport","sport","sport","maps","misc","OzUncon19","OzUncon19","misc","demographics","demographics"],["package","package","link","link","link","link","link","link","package","links","links","links","links","package","package","package","package-BROKEN??","link","link","package","package","package","package","package","package","package","links","package","package"],["Flight data","Road deaths","Vehicle use","Sydney beach data","River and rainfall data","Data about Australian birds","Atlas of Australian biodiversity","Bush fire data","access to BOM data","links to QLD environment and Maps data","CSIRO data portal, some behind confidentiality","Australian ocean data network","Access to enironmental and non environmental data from DataVic","Baby names in Australia","Election and census data","Australian economic data","Household survey","Longitudinal","Data from the 2017 marriage equality survey","AFL data","AFL data","Cricket data","Maps of Australia","Maps of Australia","Air quality datasets","PISA data ","Access to data from hackerspace projects","Indigenous mortality data","Australian demographics data base"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Name<\/th>\n      <th>Topic<\/th>\n      <th>Package/Link<\/th>\n      <th>Data explanation<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"lengthMenu":[10,20,50],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-f83aec602527e5aac1c8" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f83aec602527e5aac1c8">{"x":{"filter":"none","data":[["ozflights","ozroaddeaths","vehicles","beaches","river","birds","atlas","fires","bomrang","QOL enviro","CSIRO data","Ocean data","DataVic","ozbabynames","eechidna","ozdata","raustats","longitudinal","marriageequality","aflinfo","fitzRoy","cricketdata","ozmaps","ozdates","smokeybear","learningtower","hackerspace","indmortality","demdatabase"],["OzUnconf17","OzUnconf17","","R-Ladies Sydney","","","","","","","","","","OzUnconf18","OzUnconf16","OzUnconf17","","","","OzUnconf17","","OzUnconf17","","","OzUncon19","OzUncon19","","",""],["transport","transport","transport","environment","environment","environment","environment","environment","environment","environment","environment","environment","environment","demographics","demographics","demographics","demographics","demographics","demographics","sport","sport","sport","maps","misc","envionment","demographics","misc","demographics","demographics"],["package","package","link","link","link","link","link","link","package","links","links","links","links","package","package","package","package","link","link","package","package","package","package","package","package","package","links","package","package"],["Flight data","Road deaths","Vehicle use","Sydney beach data","River and rainfall data","Data about Australian birds","Atlas of Australian biodiversity","Bush fire data","access to BOM data","links to QLD environment and Maps data","CSIRO data portal, some behind confidentiality","Australian ocean data network","Access to enironmental and non environmental data from DataVic","Baby names in Australia","Election and census data","Australian economic data","Household survey","Longitudinal","Data from the 2017 marriage equality survey","AFL data","AFL data","Cricket data","Maps of Australia","Maps of Australia","Air quality datasets","PISA data","Access to data from hackerspace projects","Indigenous mortality data","Australian demographics data base"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Name<\/th>\n      <th>Origin<\/th>\n      <th>Topic<\/th>\n      <th>Package/Link<\/th>\n      <th>Data explanation<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"lengthMenu":[10,20,50],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
 <div style="margin-bottom:50px;">
 </div>
@@ -81,14 +81,30 @@ movements %>%
 
 ### Ozroaddeaths
 
-Ozunconf18 produced a package to easily obtain this data (and did some cleaning). https://github.com/ropenscilabs/ozroaddeaths
+Ozunconf18 produced a package to easily obtain this data (and did some cleaning). Check the [README](https://github.com/ropenscilabs/ozroaddeaths).
+
+
+```r
+devtools::install_github('ropenscilabs/ozroaddeaths')
+```
+
+
 
 ```r
 library(tidyverse)
 
 crashes <- ozroaddeaths::oz_road_fatal_crash() 
-# fatalities <- ozroaddeaths::oz_road_fatalities() # NOT WORKING
+fatalities <- ozroaddeaths::oz_road_fatalities() 
+
+crash_plot <- ggplot(crashes, aes(x=year)) +
+  geom_line(stat = "count") +
+  theme_minimal() +
+  ggtitle("Annual Fatal Car Accidents")
+
+crash_plot
 ```
+
+![](OZdatasets_files/figure-html/roaddeaths-1.png)<!-- -->
 
 <br>
 
@@ -211,13 +227,13 @@ p1<-qplot(Syd_beach$Site,log(Syd_beach$`Enterococci (cfu/100ml)`+0.5),data=Syd_b
 p1+coord_flip()
 ```
 
-![](OZdatasets_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](OZdatasets_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
 ```r
 qplot(Syd_beach$Council,log(Syd_beach$`Enterococci (cfu/100ml)`+0.5),data=Syd_beach,geom=c("boxplot"),main="Enterococci",xlab="Council",ylab="Log(cflu/100 ml + 0.5)")
 ```
 
-![](OZdatasets_files/figure-html/unnamed-chunk-10-2.png)<!-- -->
+![](OZdatasets_files/figure-html/unnamed-chunk-11-2.png)<!-- -->
 
 <br>
 
@@ -268,7 +284,7 @@ plot.ts(Pinegrove$WaterLevel)
 plot.ts(Pinegrove$Rainfall)
 ```
 
-![](OZdatasets_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](OZdatasets_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
 ```r
 require(graphics)
@@ -279,14 +295,14 @@ acf(Pinegrove$Rainfall)
 pacf(Pinegrove$Rainfall)
 ```
 
-![](OZdatasets_files/figure-html/unnamed-chunk-11-2.png)<!-- -->
+![](OZdatasets_files/figure-html/unnamed-chunk-12-2.png)<!-- -->
 
 ```r
 par(mfrow=c(1,1))
  ccf(Pinegrove$WaterLevel, Pinegrove$Rainfall, ylab = "Cross-correlation")
 ```
 
-![](OZdatasets_files/figure-html/unnamed-chunk-11-3.png)<!-- -->
+![](OZdatasets_files/figure-html/unnamed-chunk-12-3.png)<!-- -->
 
 <br>
 
